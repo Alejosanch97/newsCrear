@@ -28,7 +28,11 @@ body {
 /* Brand/Logo styling */
 .navbar-brand {
     color: #ffffff;
-    font-size: 1.8rem;
+    /* Usamos flexbox para alinear el escudo y el texto */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el escudo y el texto */
+    font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: -0.02em;
@@ -39,6 +43,12 @@ body {
 
 .navbar-brand:hover {
     color: #FFD700;
+}
+
+/* Estilo para el escudo */
+.navbar-logo {
+    height: 70px; /* Tamaño del escudo en escritorio */
+    width: auto;
 }
 
 /* Navigation links */
@@ -120,6 +130,15 @@ body {
     .hamburger {
         display: flex;
     }
+    
+    /* Ajustamos el tamaño del logo para móviles */
+    .navbar-logo {
+        height: 25px; 
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
 
     .nav-links {
         flex-direction: column;
@@ -146,11 +165,21 @@ body {
         text-align: center;
         margin: 0.75rem 0;
     }
-
+    
+    /* Corregimos el estilo para los enlaces de navegación */
     .nav-links li a {
         display: block;
         padding: 0.75rem 0;
         font-size: 1.2rem;
+    }
+    
+    /* También corregí el nombre de la clase aquí, de 'navbar-brand' a 'navbar-link' para ser más específico */
+    .nav-links li .navbar-link {
+        display: block;
+        padding: 0.75rem 0;
+        font-size: 1.2rem;
+        /* Asegúrate de que los enlaces dentro del menú móvil tengan un color consistente */
+        color: #fff;
     }
 
     .nav-links li a.active-link::after {

@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-
+import schoolCrest from '../components/escudo.png';
 
 export const Navbar = () => {
-    // State to manage which link is currently active
     const [activeLink, setActiveLink] = useState('Home');
-    // State to manage the visibility of the mobile menu
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Function to handle link clicks and update the active link state
     const handleLinkClick = (linkName) => {
         setActiveLink(linkName);
-        setIsMenuOpen(false); // Close the menu after clicking a link (for mobile)
+        setIsMenuOpen(false);
     };
 
-    // Function to toggle the mobile menu visibility
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -24,10 +20,13 @@ export const Navbar = () => {
         <nav className="navbar">
             <div className="container">
                 {/* Brand/Logo */}
+                
                 <a href="#home" className="navbar-brand" onClick={() => handleLinkClick('Home')}>
-                    School News
+                    {/* El escudo y el texto están ahora en un solo enlace */}
+                    <img src={schoolCrest} alt="Escudo del Colegio Crear" className="navbar-logo" />
+                    Crear News 
                 </a>
-
+                
                 {/* Hamburger menu icon for mobile */}
                 <button className="hamburger" onClick={toggleMenu} aria-label="Toggle navigation menu">
                     <span className="bar"></span>
@@ -38,27 +37,9 @@ export const Navbar = () => {
                 {/* Navigation links */}
                 <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
                     <li>
-                        <Link to="/" className="navbar-brand" onClick={() => handleLinkClick('Home')}>
+                        <Link to="/" className="navbar-link" onClick={() => handleLinkClick('Home')}>
                             School News
                         </Link>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className={activeLink === 'Contact' ? 'active-link' : ''}
-                            onClick={() => handleLinkClick('Contact')}
-                        >
-                            Contact
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#manage-articles"
-                            className={activeLink === 'Manage Articles' ? 'active-link' : ''}
-                            onClick={() => handleLinkClick('Manage Articles')}
-                        >
-                            Manage Articles
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -66,5 +47,4 @@ export const Navbar = () => {
     );
 };
 
-// Default export for the component to be used in other files
 export default Navbar;

@@ -24,25 +24,7 @@ const articles = [
     <strong>AI Generated Summary:</strong> Homework and studying are crucial for academic success, reinforcing knowledge, preparing for exams, and building essential life skills like time management and responsibility. Consistent effort in these areas leads to better understanding, improved performance, and increased confidence, ultimately preparing students for future success.
   </p></div>`
     },
-    {
-        id: '2',
-        title: 'The Importance of Rest: Why Students Need Vacation Time',
-        subtitle: 'Vacations aren\'t just breaks—they are essential for mental health, personal growth, and better academic performance.',
-        author: 'CREAR News Team',
-        category: 'Lifestyle',
-        tags: ['vacation', 'student life', 'rest', 'productivity', 'wellbeing'],
-        slug: 'why-students-need-vacation-time',
-        imageUrl: 'https://i.pinimg.com/originals/a4/b0/fd/a4b0fd45c9210a9ed78f7b034159c0ea.gif',
-        date: 'June 18, 2025',
-        fullArticleHtml: `<h1 class="article-full-title">The Importance of Rest: Why Students Need Vacation Time</h1><p class="article-full-meta"><strong>By CREAR News Team</strong> | <em>June 2025</em></p><p class="article-full-paragraph">Vacations are more than just free time. For students, they provide a much-needed break from academic pressure and allow time to recharge mentally, emotionally, and physically. Rest is a vital part of the learning process, and taking time off can actually improve focus, motivation, and performance once school resumes.</p><p class="article-full-paragraph">In our busy academic routines, students often feel overwhelmed by homework, projects, and exams. This constant pressure can lead to stress and even burnout. Vacations offer the opportunity to relax, explore new interests, and spend quality time with family and friends—activities that contribute to a balanced and healthy lifestyle.</p><p class="article-full-heading">🌞 Mental and Emotional Recharge</p><p class="article-full-paragraph">Resting the brain is as important as exercising it. Vacations give students time to step away from responsibilities and allow the brain to process information learned during the semester. Breaks help reduce anxiety, improve mood, and refresh energy levels. A well-rested student is more likely to return to school with better attention and a positive attitude.</p><p class="article-full-paragraph">Taking time off also strengthens emotional health. Being free from deadlines and performance pressure allows students to enjoy the present moment, reflect on their experiences, and set new personal goals.</p><img src="https://i.pinimg.com/736x/04/35/63/043563457f23c269ca898ccee677fa27.jpg" alt="Students relaxing on vacation" class="article-full-image" loading="lazy" data-ai-hint="students relaxing on vacation" /><h3 class="article-full-heading">🏕️ Building Life Skills Through Free Time</h3><p class="article-full-paragraph">Vacations aren’t just about doing nothing—they’re a chance to grow in different ways. Students can take up hobbies, travel, read, or even help at home. These experiences build creativity, responsibility, and confidence.</p><p class="article-full-paragraph">Learning outside the classroom is just as valuable. For example, helping plan a family trip can teach organization and budgeting. Reading for fun improves language skills. Playing sports or music develops discipline and perseverance.</p><h3 class="article-full-heading">💡 A Balanced Life = Better Learning</h3><p class="article-full-paragraph">Rest and learning go hand in hand. When students return to school after a vacation, they tend to be more focused, motivated, and enthusiastic. Their minds are clearer, and they are better prepared to absorb new knowledge.</p><p class="article-full-paragraph">By recognizing the value of rest, schools and families can support students in building healthy habits that will benefit them throughout their lives. Encouraging rest and recreation is not a waste of time—it’s a wise investment in well-being and future success.</p><p class="article-full-paragraph">So, take that break, enjoy your time, and come back stronger. Because rest is not just a pause—it's part of the process.</p><hr class="article-full-divider" /><div class="article-full-footer">
-  <p><strong>Author:</strong> CREAR News Team</p>
-  <p><strong>Category:</strong> Lifestyle</p>
-  <p class="Published">June 2025</p>
-  <p class="Tags">vacation, student life, rest, productivity, wellbeing</p>
-  <p class="article-full-summary">
-    <strong>AI Generated Summary:</strong> Taking breaks is essential for students. Vacations help recharge the brain, reduce stress, and allow space for personal growth. With balanced rest and recreation, students return to school more focused, motivated, and ready to succeed.
-  </p></div>`
-    },
+
     {
         id: '3',
         title: 'The Rise of AI in Education: Opportunities and Challenges',
@@ -59,7 +41,67 @@ const articles = [
   <p class="Published">June 2025</p>
   <p class="Tags">AI, education, technology, future of learning</p>
 </div>`
-    }
+    },
+    // NUEVA NOTICIA 1: Mascota de Primaria
+    {
+        id: '4',
+        title: 'My Friend Noah',
+        subtitle: 'A sweet story about a special friend from one of our youngest students.',
+        author: 'Martin Moreno Uriza, Grado 2°',
+        category: 'Primary',
+        tags: ['pets', 'dogs', 'students'],
+        slug: 'my-friend-noah',
+        imageUrl: 'https://i.pinimg.com/1200x/df/14/ba/df14ba2c59531aed803a2a7c94b3f9a4.jpg',
+        date: 'July 31, 2025',
+    },
+    // NUEVA NOTICIA 2: Historieta
+    {
+        id: '5',
+        title: 'A Day at CREAR: A Comic Strip',
+        subtitle: 'An illustrated look at school life through the creative eyes of a 7th grader.',
+        author: 'Mariana Valentina Gutiérrez, Grado 7°',
+        category: 'Creative Corner',
+        tags: ['comic', 'art', 'school life'],
+        slug: 'a-day-at-crear-comic',
+        imageUrl: 'https://i.postimg.cc/kGZ7JmYP/Chat-GPT-Image-31-jul-2025-11-44-08-a-m.png',
+        date: 'July 30, 2025',
+    },
+    // NUEVA NOTICIA 3: Table Tennis
+    {
+        id: '6',
+        title: 'CREAR Table Tennis Championship',
+        subtitle: 'Highlights from the exciting matches and the champion of our latest tournament.',
+        author: 'María Paula Mancipe, Grado 7°',
+        category: 'Sports',
+        tags: ['table tennis', 'sports', 'championship'],
+        slug: 'table-tennis-championship',
+        imageUrl: 'https://i.pinimg.com/1200x/0d/c0/b3/0dc0b3d88152ab3de8733b48cad928f9.jpg',
+        date: 'July 29, 2025',
+    },
+    // NUEVA NOTICIA 4: Video de Cocina
+    {
+        id: '7',
+        title: 'Cooking Corner: How to Prepare a Lemonade',
+        subtitle: 'Chef Ángel shows us how to make a refreshing lemonade for a sunny day.',
+        author: 'Ángel Tomás González, Grado 7°',
+        category: 'Cooking',
+        tags: ['recipes', 'cooking', 'tutorial'],
+        slug: 'how-to-prepare-a-limonade',
+        imageUrl: 'https://i.pinimg.com/736x/b5/d9/72/b5d972d8c6dfacb37ff516f3d86d3f8c.jpg',
+        date: 'July 28, 2025',
+    },
+    // NUEVA NOTICIA 5: Animación
+    {
+        id: '8',
+        title: 'Student Spotlight: Creative Animation by Sara',
+        subtitle: 'A visually stunning animation created by our talented student, Sara Daniela Pineda.',
+        author: 'Sara Daniela Pineda, Grado 7°',
+        category: 'Arts & Culture',
+        tags: ['animation', 'creative', 'art'],
+        slug: 'creative-animation-sara',
+        imageUrl: 'https://i.postimg.cc/kGZ7JmYP/Chat-GPT-Image-31-jul-2025-11-44-08-a-m.png',
+        date: 'July 27, 2025',
+    },
 ];
 
 export const Home = () => {

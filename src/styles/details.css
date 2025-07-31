@@ -3,15 +3,25 @@
 
 /* Main wrapper to allow the back button to sit above the container */
 .details-page-wrapper {
-    max-width: 900px; /* Matching the container max-width */
-    margin: 2rem auto; /* Center the wrapper */
-    padding: 0 1.5rem; /* Consistent padding */
-    position: relative; /* For the back button positioning */
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    position: relative;
 }
 
-/* Back button styling - positioned at the very top of the wrapper */
+/* General body styling for a subtle background */
+body {
+    background-color: #EBF2F5; /* Gris muy claro */
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Back button styling */
 .back-button-top {
-    background-color: #f0f4f7; /* Un color suave que combine */
+    background-color: #f0f4f7;
     color: #333;
     border: 1px solid #d0dbe2;
     padding: 0.6rem 1.2rem;
@@ -20,12 +30,12 @@
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-    display: inline-flex; /* Para alinear el texto y el ícono */
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem; /* Espacio entre flecha y texto */
-    margin-bottom: 1.5rem; /* Espacio entre el botón y el contenido de la noticia */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil */
-    text-decoration: none; /* Asegurar que no tenga subrayado si se convierte en Link */
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
 }
 
 .back-button-top:hover {
@@ -38,51 +48,51 @@
     transform: translateY(0);
 }
 
-
 /* Main container for the article detail page content */
 .details-page-container {
-    background-color: #ffffff; /* White background for the article content */
+    background-color: #ffffff; /* Fondo blanco para el contenido */
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    line-height: 1.7; /* Good readability */
-    color: #333; /* Default text color for the body */
-    overflow: hidden; /* Ensure rounded corners are applied to images within */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    line-height: 1.7;
+    color: #333;
+    overflow: hidden;
 }
 
 /* Article Header Section */
 .details-page-header {
     text-align: center;
-    padding-top: 0; /* Already accounted for by wrapper margin and button */
     margin-bottom: 2rem;
 }
 
 /* --- IMAGEN PRINCIPAL (Hero Image) --- */
 .details-page-hero-image {
     width: 100%;
-    max-height: 350px; /* Reducción adicional de la altura máxima */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
-    border-radius: 12px 12px 0 0; /* Bordes redondeados solo arriba, para integrar con el contenedor */
+    /* Altura automática para que la imagen no se corte */
+    height: auto;
+    /* Eliminamos la altura máxima para que la imagen se muestre completa */
+    object-fit: contain; /* Ajusta la imagen para que quepa completamente */
+    border-radius: 12px 12px 0 0;
     margin-bottom: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .details-page-header-content {
-    padding: 0 2.5rem; /* Aumenta el padding para un mejor espacio */
+    padding: 0 2.5rem;
 }
 
 .details-page-category {
-    font-size: 0.95rem; /* Ligeramente más pequeño para la categoría */
+    font-size: 0.95rem;
     font-weight: 700;
-    color: #007bff; /* Azul para categoría, destaca bien */
+    color: #E94560; /* Color de acento */
     text-transform: uppercase;
-    letter-spacing: 0.08em; /* Más espaciado entre letras */
+    letter-spacing: 0.08em;
     margin-bottom: 0.6rem;
     display: block;
 }
 
 .details-page-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem; /* Tamaño del título ajustado para ser llamativo pero no excesivo */
+    font-size: 2.8rem;
     font-weight: 800;
     color: #1a1a1a;
     margin: 0.6rem 0 1rem;
@@ -90,52 +100,74 @@
 }
 
 .details-page-subtitle {
-    font-size: 1.2rem; /* Subtítulo ligeramente más pequeño */
+    font-size: 1.2rem;
     color: #555;
     margin-bottom: 1.5rem;
 }
 
 .details-page-meta {
-    font-size: 0.9rem; /* Meta info más pequeña */
+    font-size: 0.9rem;
     color: #777;
     margin-bottom: 2rem;
 }
 
-/* Article Body Styling (content from dangerouslySetInnerHTML) */
+/* Article Body Styling */
 .details-page-body {
-    padding: 0 2.5rem 2.5rem; /* Padding uniforme */
-    font-size: 1.1rem; /* Tamaño de fuente ligeramente reducido para el párrafo base */
+    padding: 0 2.5rem 2.5rem;
+    /* Texto más grande */
+    font-size: 1.15rem;
     color: #333;
 }
 
 /* Specific styles for HTML elements within the article body */
 .details-page-body p.details-page-paragraph {
-    margin-bottom: 1.2rem; /* Espacio entre párrafos */
-    text-align: justify; /* Justifica el texto para un aspecto más formal */
+    margin-bottom: 1.5rem; /* Aumenta el espacio entre párrafos */
+    text-align: justify;
 }
 
 .details-page-body h3.details-page-heading {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem; /* Subheadings */
-    font-weight: 700; /* Más negrita */
+    font-size: 1.8rem;
+    font-weight: 700;
     color: #1a1a1a;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #FFD700; /* Yellow underline for subheadings */
+    border-bottom: 2px solid #E94560;
     padding-bottom: 0.5rem;
     display: inline-block;
 }
 
 /* --- IMAGEN SECUNDARIA (In-Article Image) --- */
 .details-page-body img.details-page-in-article-image {
-    max-width: 70%; /* Aún más pequeña para las imágenes dentro del artículo */
+    max-width: 70%;
     height: auto;
     display: block;
-    margin: 2.5rem auto; /* Centra y da espacio */
+    margin: 2.5rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee; /* Borde sutil para enmarcar */
+    border: 1px solid #eee;
 }
+
+/* --- ESTILOS PARA VIDEOS RESPONSIVOS --- */
+.details-page-body .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 2.5rem auto; /* Centra y mejora la distribución del video */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.details-page-body .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 
 .details-page-body hr.details-page-hr {
     border: none;
@@ -143,29 +175,29 @@
     margin: 3rem 0;
 }
 
-/* --- DISEÑO MEJORADO DEL FOOTER/RESUMEN FINAL --- */
+/* --- DISEÑO DEL FOOTER/RESUMEN FINAL --- */
 .details-page-footer {
     font-size: 0.9rem;
     color: #555;
     margin-top: 3rem;
-    padding: 2.5rem; /* Más padding para el footer */
-    background-color: #f8fbfc; /* Un color de fondo muy suave, casi blanco azulado */
-    border-radius: 0 0 12px 12px; /* Bordes redondeados solo abajo */
-    border-top: 1px solid #e5eef5; /* Borde superior sutil */
-    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.03); /* Sombra interna sutil */
+    padding: 2.5rem;
+    background-color: #f8fbfc;
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid #e5eef5;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.03);
 }
 
 .details-page-footer .footer-info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columnas o más, mínimo 200px */
-    gap: 0.8rem 2rem; /* Espacio entre filas y columnas */
-    padding-bottom: 1.5rem; /* Espacio antes del resumen */
-    border-bottom: 1px dashed #e0e0e0; /* Separador sutil */
-    margin-bottom: 1.5rem; /* Espacio debajo del separador */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #e0e0e0;
+    margin-bottom: 1.5rem;
 }
 
 .details-page-footer p {
-    margin-bottom: 0.3rem; /* Espacio reducido entre líneas de información */
+    margin-bottom: 0.3rem;
     line-height: 1.3;
 }
 
@@ -176,24 +208,23 @@
 .details-page-summary {
     font-style: normal;
     color: #333;
-    margin-top: 0; /* El margen ya lo maneja el padding-bottom del grid */
+    margin-top: 0;
     padding: 1.5rem;
-    background-color: #eff6fc; /* Fondo azul más claro para el resumen */
+    background-color: #eff6fc;
     border-radius: 8px;
-    border: 1px solid #d3e5f2; /* Borde que lo enmarca */
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05); /* Sombra interna para destacarlo */
-    font-size: 1rem; /* Tamaño de fuente estándar */
+    border: 1px solid #d3e5f2;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
     line-height: 1.6;
 }
 
 .details-page-summary strong {
-    display: block; /* Para que "Resumen generado por IA" esté en su propia línea */
+    display: block;
     margin-bottom: 0.5rem;
-    color: #004085; /* Un azul oscuro para el título del resumen */
+    color: #E94560;
     font-size: 1.1rem;
     font-weight: 600;
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -203,7 +234,7 @@
     }
 
     .back-button-top {
-        margin-left: 0; /* Alinea a la izquierda en móvil */
+        margin-left: 0;
         width: auto;
     }
 
@@ -212,7 +243,7 @@
     }
 
     .details-page-title {
-        font-size: 2rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+        font-size: 2rem;
     }
 
     .details-page-subtitle {
@@ -228,28 +259,30 @@
     }
 
     .details-page-body p.details-page-paragraph {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
     }
 
-    /* Ajuste de imagen principal en móvil */
     .details-page-hero-image {
-        max-height: 220px;
+        max-height: none; /* Eliminamos el max-height para que la imagen se ajuste */
+        object-fit: contain;
     }
-
-    /* Ajuste de imagen dentro del artículo en móvil */
+    
     .details-page-body img.details-page-in-article-image {
-        max-width: 95%; /* Más grande en móvil para visibilidad */
+        max-width: 95%;
         margin: 1.5rem auto;
     }
 
-    /* Ajuste del footer en móvil */
+    .details-page-body .video-container {
+        margin: 1.5rem auto;
+    }
+
     .details-page-footer {
         padding: 1.5rem;
-        border-radius: 0 0 12px 12px; /* Mantiene bordes redondeados */
+        border-radius: 0 0 12px 12px;
     }
 
     .details-page-footer .footer-info-grid {
-        grid-template-columns: 1fr; /* Apila las columnas en móvil */
+        grid-template-columns: 1fr;
         gap: 0.6rem;
         padding-bottom: 1rem;
         margin-bottom: 1rem;

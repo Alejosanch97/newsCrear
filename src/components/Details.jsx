@@ -1,8 +1,7 @@
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom"; // Importa useParams para leer la URL y useNavigate para redirigir
 import "../styles/details.css";
 // Define la data de tus artículos directamente en este componente.
-// En una aplicación más grande, esta data probablemente vendría de un contexto compartido, Redux,
-// o se obtendría de una API basada en el articleSlug.
 const articlesData = [
     {
         id: '1',
@@ -28,6 +27,9 @@ const articlesData = [
             <h3 class="details-page-heading">⏳ Building Discipline and Responsibility</h3>
             <p class="details-page-paragraph">Doing homework regularly also helps students develop important life skills. Time management is one of them. Knowing how to plan time between school, homework, and personal activities is a valuable skill for the future. Completing homework on time teaches responsibility and builds confidence in students’ abilities.</p>
             <p class="details-page-paragraph">Additionally, when students complete their tasks without being reminded, they feel proud of their work. It teaches them the value of consistency and discipline. These are skills that not only help in school but also in future jobs and everyday life.</p>
+            <p class="details-page-paragraph">
+                <strong><a href="https://www.youtube.com/watch?v=your-video-id" target="_blank">Watch this video</a></strong> on effective study tips.
+            </p>
             <h3 class="details-page-heading">🎯 Conclusion: Strong Habits Lead to Strong Results</h3>
             <p class="details-page-paragraph">Homework and studying are not just tasks from teachers—they are tools for success. When students make these practices part of their routine, they gain more than good grades. They become more organized, confident, and prepared for the future.</p>
             <p class="details-page-paragraph">So remember, even a few minutes of homework or review each day can make a big difference. Good habits today build great achievements tomorrow!</p>
@@ -89,9 +91,128 @@ const articlesData = [
             </div>
         `,
         summary: `Artificial intelligence is rapidly changing many aspects of our lives, and education is no exception. From personalized learning platforms to automated grading, AI offers exciting opportunities to enhance the learning experience.`
+    },
+    // NUEVA NOTICIA 1: Mascota de Primaria
+    {
+        id: '4',
+        title: 'My Friend Noah',
+        subtitle: 'A sweet story about a special friend from one of our youngest students.',
+        author: 'Martin Moreno Uriza, Grado 2°',
+        category: 'Primary',
+        tags: ['pets', 'dogs', 'students'],
+        slug: 'my-friend-noah',
+        imageUrl: 'https://i.pinimg.com/originals/21/e2/98/21e2982f65a7b5b5a9a1b77ec87042e2.gif',
+        inArticleImageUrl: null,
+        date: 'July 31, 2025',
+        fullArticleText: `
+            <p class="details-page-paragraph">This is Noah. He is a Dog. He is big and brown. Noah is three years old. He has a favorite toy, a blue ball. Noah is my friend. I love Noah.</p>
+            <div class="video-container">
+              <iframe src="https://streamable.com/e/4ww2yo?autoplay=0" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+            </div>
+        `,
+        summary: `A student from 2nd grade writes about his best friend, a big, brown, three-year-old dog named Noah.`
+    },
+    // NUEVA NOTICIA 2: Historieta
+    {
+        id: '5',
+        title: 'A Day at CREAR: A Comic Strip',
+        subtitle: 'An illustrated look at school life through the creative eyes of a 7th grader.',
+        author: 'Mariana Valentina Gutiérrez, Grado 7°',
+        category: 'Creative Corner',
+        tags: ['comic', 'art', 'school life'],
+        slug: 'a-day-at-crear-comic',
+        imageUrl: 'https://i.pinimg.com/originals/8b/70/4f/8b704f5e6a201423a676c96f8937d3c6.gif',
+        inArticleImageUrl: 'https://i.pinimg.com/736x/a1/b5/63/a1b563c20b3272e694004fdef79f5269.jpg',
+        date: 'July 30, 2025',
+        fullArticleText: `
+            <p class="details-page-paragraph">Aquí tienes una creativa historieta que captura un día en el colegio, con las divertidas aventuras y los momentos de amistad que se viven en los pasillos de CREAR. ¡Esperamos que te diviertas leyéndola!</p>
+            <img src="https://i.pinimg.com/736x/a1/b5/63/a1b563c20b3272e694004fdef79f5269.jpg" alt="Comic strip from student" class="details-page-in-article-image" loading="lazy" />
+        `,
+        summary: `Mariana from 7th grade shares a creative comic strip depicting a day at school, filled with fun adventures and moments of friendship.`
+    },
+    // NUEVA NOTICIA 3: Table Tennis
+    {
+    id: '6',
+    title: 'CREAR Table Tennis Championship',
+    subtitle: 'Highlights from the exciting matches and the champion of our latest tournament.',
+    author: 'María Paula Mancipe, Grado 7°',
+    category: 'Sports',
+    tags: ['table tennis', 'sports', 'championship'],
+    slug: 'table-tennis-championship',
+    imageUrl: 'https://i.pinimg.com/originals/f2/3a/e7/f23ae77896d13766dff89e573caa20b9.gif',
+    inArticleImageUrl: 'https://i.pinimg.com/originals/f2/3a/e7/f23ae77896d13766dff89e573caa20b9.gif',
+    date: 'July 29, 2025',
+    fullArticleText: `
+        <p class="details-page-paragraph">Hello guys, how are you, i know that many of you play this sport even if you don´t know many important things and aspects about it.</p>
+        <p class="details-page-paragraph">Believe me, it is very difficult for me to cover and explain everything about this beautiful sport, it would even be impossible for me to teach you how to play very well, but just read this article and get some information that can help you improve a little bit.</p>
+        <p class="details-page-paragraph">First of all, Table tennis is much more than hitting a ball with a racket. It's a sport of quick reflexes, concentration, and strategy. Every point is a mental and physical battle.</p>
+        <p class="details-page-paragraph">Table tennis also requires a good physical and mental preparation. Professional players train for hours to improve their technique, reaction time, and concentration. Matches may seem short, but they require intense effort and a great deal of tactical intelligence.</p>
+        <h3 class="details-page-heading">Basic Table Tennis Shots</h3>
+        <p class="details-page-paragraph">Drive (flat shot or attack shot)</p>
+        <p class="details-page-paragraph">This is one of the most common shots. It is performed by pushing the ball forward with the paddle slightly tilted. It can be performed with a forehand drive (forehand drive) or a backhand drive (backhand drive).</p>
+        <p class="details-page-paragraph">Ideal for keeping the ball in play at medium speed.</p>
+        <img src="https://i.pinimg.com/originals/4e/b7/b7/4eb7b7f103f9e0e73bcbc67154443a19.gif" alt="Table tennis shots" class="details-page-in-article-image" loading="lazy" />
+        <h3 class="details-page-heading">Topspin</h3>
+        <p class="details-page-paragraph">This is an offensive shot that causes the ball to spin forward (top spin). When hitting, the paddle is moved from bottom to top. This causes the ball to bounce and rise quickly, making it difficult for the opponent to respond.</p>
+        <h3 class="details-page-heading">Backspin (chop)</h3>
+        <p class="details-page-paragraph">This is a defensive shot that spins the ball backward (slice). This is performed by moving the paddle from top to bottom. This causes the ball to drop quickly when bouncing, making it difficult for the opponent to attack.</p>
+        <h3 class="details-page-heading">Block</h3>
+        <p class="details-page-paragraph">This is a technique for returning a fast ball without hitting hard. The paddle is placed firmly in front of the ball. It's very useful for defending against an opponent's topspin and returning with control.</p>
+        <h3 class="details-page-heading">Serve</h3>
+        <p class="details-page-paragraph">This is the shot that starts each point. It can have different effects: flat, with topspin, with backspin, or with sidespin. A good serve can confuse your opponent and give you an advantage from the start of the point.</p>
+        <p class="details-page-paragraph">Today, table tennis is played all over the world, both recreationally and competitively. Countries such as China, Japan, Germany, and South Korea have a long tradition in this sport. In Latin America, nations such as Brazil, Argentina, and Colombia have had important representatives in international tournaments.</p>
+        <h3 class="details-page-heading">Why are basic strokes important?</h3>
+        <p class="details-page-paragraph">Mastering the basic strokes is essential for any player, whether beginner or professional. These strokes allow you to control the ball, maintain the rhythm of the game, and build strategies for attacking or defending. Each stroke has a specific function and is used depending on the match situation.</p>
+        <h3 class="details-page-heading">Fun Facts</h3>
+        <p class="details-page-paragraph">In professional table tennis, the ball can spin up to 150 times per second with a good topspin! Some players use spin combinations to deceive their opponents, such as double-spin serves (for example, backspin and sidespin at the same time). Although it may seem like an easy sport because of the small table, reflexes must be almost as fast as in boxing!</p>
+        <h3 class="details-page-heading">Author profile</h3>
+        <p class="details-page-paragraph">Name: María Paula Mancipe L<br>Grade: Seventh grade<br>Age: 12 years old<br>I play Table tennis and i think it is a very beautiful sport.</p>
+        <p class="details-page-paragraph">Thank you for reading this article and I hope I can do many more to continue talking about this beautiful sport called table tennis to try to help you understand more and more important things about this sport.</p>
+        <p class="details-page-paragraph">See you next time</p>
+    `,
+    summary: `A recap of the thrilling CREAR table tennis championship. The article highlights the exciting matches and celebrates María Paula Mancipe, the tournament winner, for her impressive skill and sportsmanship.`
+},
+    // NUEVA NOTICIA 4: Video de Cocina
+    {
+        id: '7',
+        title: 'Cooking Corner: How to Prepare a Lemonade',
+        subtitle: 'Chef Ángel shows us how to make a refreshing lemonade for a sunny day.',
+        author: 'Ángel Tomás González, Grado 7°',
+        category: 'Cooking',
+        tags: ['recipes', 'cooking', 'tutorial'],
+        slug: 'how-to-prepare-a-limonade',
+        imageUrl: 'https://i.pinimg.com/originals/a3/1f/8d/a31f8de21dbb5eb14e32a409cc525d68.gif',
+        inArticleImageUrl: null,
+        date: 'July 28, 2025',
+        fullArticleText: `
+            <p class="details-page-paragraph">¡Hola a todos! En este video, aprenderán a preparar una deliciosa y refrescante limonada. Es la bebida perfecta para un día caluroso y muy fácil de hacer. ¡Solo necesitan unos pocos ingredientes y estarán listos para disfrutarla!</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://streamable.com/nldn8j"" title="Placeholder Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        `,
+        summary: `Ángel Tomás González from 7th grade presents a cooking tutorial on how to prepare a simple and refreshing lemonade. The video provides a step-by-step guide on making the perfect drink for a warm day.`
+    },
+    // NUEVA NOTICIA 5: Animación
+    {
+        id: '8',
+        title: 'Student Spotlight: Creative Animation by Sara',
+        subtitle: 'A visually stunning animation created by our talented student, Sara Daniela Pineda.',
+        author: 'Sara Daniela Pineda, Grado 7°',
+        category: 'Arts & Culture',
+        tags: ['animation', 'creative', 'art'],
+        slug: 'creative-animation-sara',
+        imageUrl: 'https://i.pinimg.com/originals/0a/d7/35/0ad735f722522d9a424b2a018ff63319.gif',
+        inArticleImageUrl: null,
+        date: 'July 27, 2025',
+        fullArticleText: `
+            <p class="details-page-paragraph">Sara Daniela Pineda del grado 7 nos sorprende con una increíble animación que muestra su gran talento y creatividad. Disfruten de este cortometraje animado que ha sido hecho con mucho esfuerzo y dedicación.</p>
+            <div class="video-container">
+              <iframe src="https://streamable.com/zjyz98" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+            </div>
+        `,
+        summary: `A showcase of the creative talents of Sara Daniela Pineda, a 7th-grade student. The article features a short animation created by her, highlighting her hard work and artistic skills.`
     }
 ];
-
 
 export const Details = () => {
     const { articleSlug } = useParams(); // Obtiene el slug de la URL
@@ -143,14 +264,16 @@ export const Details = () => {
 
                 <footer className="details-page-footer">
                     <div className="footer-info-grid">
-                        <p><strong>Autor:</strong> {article.author}</p>
-                        <p><strong>Categoría:</strong> {article.category}</p>
-                        <p><strong>Publicado:</strong> {article.date}</p>
-                        <p><strong>Etiquetas:</strong> {article.tags.join(', ')}</p>
+                        <p><strong>Author:</strong> {article.author}</p>
+                        <p><strong>Category:</strong> {article.category}</p>
+                        <p><strong>Published:</strong> {article.date}</p>
+                        <p><strong>Tags:</strong> {article.tags.join(', ')}</p>
                     </div>
-                    <p className="details-page-summary">
-                        <strong>Resumen generado por IA:</strong> {article.summary}
-                    </p>
+                    {article.summary && (
+                        <p className="details-page-summary">
+                            <strong>IA summary:</strong> {article.summary}
+                        </p>
+                    )}
                 </footer>
             </div>
         </div>
