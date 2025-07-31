@@ -63,7 +63,7 @@ const articles = [
         category: 'Creative Corner',
         tags: ['comic', 'art', 'school life'],
         slug: 'a-day-at-crear-comic',
-        imageUrl: 'https://i.postimg.cc/kGZ7JmYP/Chat-GPT-Image-31-jul-2025-11-44-08-a-m.png',
+        imageUrl: 'https://i.pinimg.com/736x/68/83/f1/6883f148162a78fc047a767a1b2525a0.jpg',
         date: 'July 30, 2025',
     },
     // NUEVA NOTICIA 3: Table Tennis
@@ -99,7 +99,7 @@ const articles = [
         category: 'Arts & Culture',
         tags: ['animation', 'creative', 'art'],
         slug: 'creative-animation-sara',
-        imageUrl: 'https://i.postimg.cc/kGZ7JmYP/Chat-GPT-Image-31-jul-2025-11-44-08-a-m.png',
+        imageUrl: 'https://i.pinimg.com/736x/68/83/f1/6883f148162a78fc047a767a1b2525a0.jpg',
         date: 'July 27, 2025',
     },
 ];
