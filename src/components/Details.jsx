@@ -125,7 +125,7 @@ const articlesData = [
         inArticleImageUrl: 'https://i.pinimg.com/736x/a1/b5/63/a1b563c20b3272e694004fdef79f5269.jpg',
         date: 'July 30, 2025',
         fullArticleText: `
-            <p class="details-page-paragraph">Aquí tienes una creativa historieta que captura un día en el colegio, con las divertidas aventuras y los momentos de amistad que se viven en los pasillos de CREAR. ¡Esperamos que te diviertas leyéndola!</p>
+            <p class="details-page-paragraph">Here’s a creative comic that captures a day at school, filled with fun adventures and moments of friendship in the hallways of CREAR. We hope you enjoy reading it!</p>
             <img src="https://i.pinimg.com/736x/a1/b5/63/a1b563c20b3272e694004fdef79f5269.jpg" alt="Comic strip from student" class="details-page-in-article-image" loading="lazy" />
         `,
         summary: `Mariana from 7th grade shares a creative comic strip depicting a day at school, filled with fun adventures and moments of friendship.`
@@ -185,9 +185,9 @@ const articlesData = [
         inArticleImageUrl: null,
         date: 'July 28, 2025',
         fullArticleText: `
-            <p class="details-page-paragraph">¡Hola a todos! En este video, aprenderán a preparar una deliciosa y refrescante limonada. Es la bebida perfecta para un día caluroso y muy fácil de hacer. ¡Solo necesitan unos pocos ingredientes y estarán listos para disfrutarla!</p>
+            <p class="details-page-paragraph">¡Hi everyone! In this video, you’ll learn how to make a delicious and refreshing lemonade. It’s the perfect drink for a hot day and super easy to make. You only need a few ingredients and you’ll be ready to enjoy it!</p>
             <div class="video-container">
-              <iframe width="560" height="315" src="https://streamable.com/nldn8j"" title="Placeholder Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://streamable.com/e/nldn8j?" title="Placeholder Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         `,
         summary: `Ángel Tomás González from 7th grade presents a cooking tutorial on how to prepare a simple and refreshing lemonade. The video provides a step-by-step guide on making the perfect drink for a warm day.`
@@ -205,9 +205,9 @@ const articlesData = [
         inArticleImageUrl: null,
         date: 'July 27, 2025',
         fullArticleText: `
-            <p class="details-page-paragraph">Sara Daniela Pineda del grado 7 nos sorprende con una increíble animación que muestra su gran talento y creatividad. Disfruten de este cortometraje animado que ha sido hecho con mucho esfuerzo y dedicación.</p>
+            <p class="details-page-paragraph">Sara Daniela Pineda from 7th grade surprises us with an amazing animation that showcases her great talent and creativity. Enjoy this animated short film, created with a lot of effort and dedication.</p>
             <div class="video-container">
-              <iframe src="https://streamable.com/zjyz98" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+              <iframe src="https://streamable.com/e/zjyz98?" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
             </div>
         `,
         summary: `A showcase of the creative talents of Sara Daniela Pineda, a 7th-grade student. The article features a short animation created by her, highlighting her hard work and artistic skills.`
