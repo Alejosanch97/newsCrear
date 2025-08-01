@@ -97,7 +97,7 @@ const articlesData = [
         id: '4',
         title: 'My Friend Noah',
         subtitle: 'A sweet story about a special friend from one of our youngest students.',
-        author: 'Martin Moreno Uriza, Grado 2°',
+        author: 'Martin Moreno Uriza, 2° Grade',
         category: 'Primary',
         tags: ['pets', 'dogs', 'students'],
         slug: 'my-friend-noah',
@@ -117,7 +117,7 @@ const articlesData = [
         id: '5',
         title: 'A Day at CREAR: A Comic Strip',
         subtitle: 'An illustrated look at school life through the creative eyes of a 7th grader.',
-        author: 'Mariana Valentina Gutiérrez, Grado 7°',
+        author: 'Mariana Valentina Gutiérrez, 7° Grade',
         category: 'Creative Corner',
         tags: ['comic', 'art', 'school life'],
         slug: 'a-day-at-crear-comic',
@@ -135,7 +135,7 @@ const articlesData = [
     id: '6',
     title: 'CREAR Table Tennis Championship',
     subtitle: 'Highlights from the exciting matches and the champion of our latest tournament.',
-    author: 'María Paula Mancipe, Grado 7°',
+    author: 'María Paula Mancipe, 7° Grade',
     category: 'Sports',
     tags: ['table tennis', 'sports', 'championship'],
     slug: 'table-tennis-championship',
@@ -147,6 +147,7 @@ const articlesData = [
         <p class="details-page-paragraph">Believe me, it is very difficult for me to cover and explain everything about this beautiful sport, it would even be impossible for me to teach you how to play very well, but just read this article and get some information that can help you improve a little bit.</p>
         <p class="details-page-paragraph">First of all, Table tennis is much more than hitting a ball with a racket. It's a sport of quick reflexes, concentration, and strategy. Every point is a mental and physical battle.</p>
         <p class="details-page-paragraph">Table tennis also requires a good physical and mental preparation. Professional players train for hours to improve their technique, reaction time, and concentration. Matches may seem short, but they require intense effort and a great deal of tactical intelligence.</p>
+        <img src="https://i.pinimg.com/736x/18/72/1c/18721c19219fc5d5c032cc7817644863.jpg" alt="Table tennis shots" class="details-page-in-article-image" loading="lazy" />
         <h3 class="details-page-heading">Basic Table Tennis Shots</h3>
         <p class="details-page-paragraph">Drive (flat shot or attack shot)</p>
         <p class="details-page-paragraph">This is one of the most common shots. It is performed by pushing the ball forward with the paddle slightly tilted. It can be performed with a forehand drive (forehand drive) or a backhand drive (backhand drive).</p>
@@ -161,6 +162,7 @@ const articlesData = [
         <h3 class="details-page-heading">Serve</h3>
         <p class="details-page-paragraph">This is the shot that starts each point. It can have different effects: flat, with topspin, with backspin, or with sidespin. A good serve can confuse your opponent and give you an advantage from the start of the point.</p>
         <p class="details-page-paragraph">Today, table tennis is played all over the world, both recreationally and competitively. Countries such as China, Japan, Germany, and South Korea have a long tradition in this sport. In Latin America, nations such as Brazil, Argentina, and Colombia have had important representatives in international tournaments.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfZEyYzFUb1BdNJAwDGEX1gLlpPUd3-I7Wg&s" alt="Table tennis shots" class="details-page-in-article-image" loading="lazy" />
         <h3 class="details-page-heading">Why are basic strokes important?</h3>
         <p class="details-page-paragraph">Mastering the basic strokes is essential for any player, whether beginner or professional. These strokes allow you to control the ball, maintain the rhythm of the game, and build strategies for attacking or defending. Each stroke has a specific function and is used depending on the match situation.</p>
         <h3 class="details-page-heading">Fun Facts</h3>
@@ -169,6 +171,8 @@ const articlesData = [
         <p class="details-page-paragraph">Name: María Paula Mancipe L<br>Grade: Seventh grade<br>Age: 12 years old<br>I play Table tennis and i think it is a very beautiful sport.</p>
         <p class="details-page-paragraph">Thank you for reading this article and I hope I can do many more to continue talking about this beautiful sport called table tennis to try to help you understand more and more important things about this sport.</p>
         <p class="details-page-paragraph">See you next time</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkwCMo0rpXO3-cxtUBC0m1Dg_rT9m0RY5EaQ&s" alt="Table tennis shots" class="details-page-in-article-image" loading="lazy" />
+        
     `,
     summary: `A recap of the thrilling CREAR table tennis championship. The article highlights the exciting matches and celebrates María Paula Mancipe, the tournament winner, for her impressive skill and sportsmanship.`
 },
@@ -177,7 +181,7 @@ const articlesData = [
         id: '7',
         title: 'Cooking Corner: How to Prepare a Lemonade',
         subtitle: 'Chef Ángel shows us how to make a refreshing lemonade for a sunny day.',
-        author: 'Ángel Tomás González, Grado 7°',
+        author: 'Ángel Tomás González, 7° Grade',
         category: 'Cooking',
         tags: ['recipes', 'cooking', 'tutorial'],
         slug: 'how-to-prepare-a-limonade',
@@ -197,7 +201,7 @@ const articlesData = [
         id: '8',
         title: 'Student Spotlight: Creative Animation by Sara',
         subtitle: 'A visually stunning animation created by our talented student, Sara Daniela Pineda.',
-        author: 'Sara Daniela Pineda, Grado 7°',
+        author: 'Sara Daniela Pineda, 7° Grade',
         category: 'Arts & Culture',
         tags: ['animation', 'creative', 'art'],
         slug: 'creative-animation-sara',
