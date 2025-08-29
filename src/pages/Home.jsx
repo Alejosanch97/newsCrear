@@ -102,6 +102,43 @@ const articles = [
         imageUrl: 'https://i.pinimg.com/736x/68/83/f1/6883f148162a78fc047a767a1b2525a0.jpg',
         date: 'July 27, 2025',
     },
+
+    // NUEVA NOTICIA 6
+    {
+        id: '9',
+        title: 'The Crying Woman',
+        subtitle: 'A story of myth and legend told by one of our students from fifth grade.',
+        author: 'Aylin Bautista, Grado 5°',
+        category: 'Myths & Legends',
+        tags: ['myth', 'legend', 'story', 'horror'],
+        slug: 'the-crying-woman',
+        imageUrl: 'https://i.pinimg.com/736x/15/9c/a0/159ca059c7ce1cabf4e1084f33afba39.jpg',
+        date: 'August 29, 2025',
+    },
+    // NUEVA NOTICIA 7
+    {
+        id: '10',
+        title: 'My Favorite Day',
+        subtitle: 'A personal story about a fan meeting their favorite YouTuber, a day full of emotions.',
+        author: 'Samaira Muentes, Grado 5°',
+        category: 'Personal Stories',
+        tags: ['concert', 'youtuber', 'favorite day', 'story'],
+        slug: 'my-favorite-day',
+        imageUrl: 'https://i.pinimg.com/736x/4c/8b/f6/4c8bf68008c268ab41a2b0380d07a19b.jpg',
+        date: 'August 29, 2025',
+    },
+    // NUEVA NOTICIA 8
+    {
+        id: '11',
+        title: 'Why Do Women Take Longer When Shopping?',
+        subtitle: 'An interesting theory about why women take longer to shop, based on ancient history.',
+        author: 'Student, Grado 3°',
+        category: 'Fun Facts',
+        tags: ['shopping', 'history', 'fun facts', 'theory'],
+        slug: 'why-women-take-longer-shopping',
+        imageUrl: 'https://i.pinimg.com/736x/3a/fa/c6/3afac6dca52ff933c58e5591259c609d.jpg',
+        date: 'August 29, 2025',
+    },
 ];
 
 export const Home = () => {

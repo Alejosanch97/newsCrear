@@ -215,6 +215,64 @@ const articlesData = [
             </div>
         `,
         summary: `A showcase of the creative talents of Sara Daniela Pineda, a 7th-grade student. The article features a short animation created by her, highlighting her hard work and artistic skills.`
+    },
+    // NUEVA NOTICIA 6
+    {
+        id: '9',
+        title: 'The Crying Woman',
+        subtitle: 'A story of myth and legend told by one of our students from fifth grade.',
+        author: 'Aylin Bautista, Grado 5°',
+        category: 'Myths & Legends',
+        tags: ['myth', 'legend', 'story', 'horror'],
+        slug: 'the-crying-woman',
+        imageUrl: 'https://i.pinimg.com/736x/15/9c/a0/159ca059c7ce1cabf4e1084f33afba39.jpg',
+        inArticleImageUrl: 'https://i.pinimg.com/736x/15/9c/a0/159ca059c7ce1cabf4e1084f33afba39.jpg',
+        date: 'August 29, 2025',
+        fullArticleText: `
+            <img src="https://i.pinimg.com/1200x/a2/e4/0c/a2e40cb2a65c5550dbfc1ba1a92e2a3f.jpg" alt="The Crying Woman" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">ONCE UPON A DAY, A WOMAN DROWNED HER CHILDREN BECAUSE HER HUSBAND CHEATED ON HER WITH ANOTHER WOMAN.</p>
+            <p class="details-page-paragraph">OVER TIME SHE REPENTED AND NOW WANDERS THE STREETS AT NIGHT, LOOKING FOR HER CHILDREN, SINGING: WHERE ARE MY CHILDRENNN.</p>
+            <p class="details-page-paragraph">BY: Aylin Bautista- grado 5°</p>
+        `,
+        summary: `A chilling myth about a woman who wanders the streets looking for her children after an act of desperation, as told by a fifth-grade student.`
+    },
+    // NUEVA NOTICIA 7
+    {
+        id: '10',
+        title: 'My Favorite Day',
+        subtitle: 'A personal story about a fan meeting their favorite YouTuber, a day full of emotions.',
+        author: 'Samaira Muentes, Grado 5°',
+        category: 'Personal Stories',
+        tags: ['concert', 'youtuber', 'favorite day', 'story'],
+        slug: 'my-favorite-day',
+        imageUrl: 'https://i.pinimg.com/736x/4c/8b/f6/4c8bf68008c268ab41a2b0380d07a19b.jpg',
+        inArticleImageUrl: 'https://i.pinimg.com/736x/4c/8b/f6/4c8bf68008c268ab41a2b0380d07a19b.jpg',
+        date: 'August 29, 2025',
+        fullArticleText: `
+            <img src="https://i.pinimg.com/736x/07/41/7e/07417e809c54ce801e429ff2128fa4f7.jpg" alt="Concert day" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">My favorite day is when I went to a concert of My favorite youtuber, in that morning I was nervous. The previous night I could not sleep. When I was in the concert I started to cry because I was super happy, when the concert started, I was very excited. The concert started at 7:30 and finished at 9:30 p.m. those two hours were the best of My life. And for that is My favorite day</p>
+            <p class="details-page-paragraph">BY: Samaira Muentes- Grado 5°</p>
+        `,
+        summary: `A heartfelt account from a fifth-grade student about the best day of their life, spent at a concert of their favorite YouTuber.`
+    },
+    // NUEVA NOTICIA 8
+    {
+        id: '11',
+        title: 'Why Do Women Take Longer When Shopping?',
+        subtitle: 'An interesting theory about why women take longer to shop, based on ancient history.',
+        author: 'Student, Grado 3°',
+        category: 'Fun Facts',
+        tags: ['shopping', 'history', 'fun facts', 'theory'],
+        slug: 'why-women-take-longer-shopping',
+        imageUrl: 'https://i.pinimg.com/736x/9f/fd/f4/9ffdf42744e5ce5c24782916f202278d.jpg',
+        inArticleImageUrl: 'https://i.pinimg.com/736x/9f/fd/f4/9ffdf42744e5ce5c24782916f202278d.jpg',
+        date: 'August 29, 2025',
+        fullArticleText: `
+            <p class="details-page-paragraph">It turns out that in the past, men were in chage of meat... women were in chage of vegetables, because they had to think carefully since some could be poisonous and could endanger the family. it was very difficult to choose the right vegetables. for example a girl sees 3 yellow, red and purple grapes, then looks at 3 iguanas where 2 of them die, and discovers taht yhe purple grapes are not poisonous and this knoledge has been passed down from generation to generation until 2023, our time.</p>
+            <p class="details-page-paragraph">BY: Student- Grado 3°</p>
+            <img src="https://i.pinimg.com/1200x/23/d1/6e/23d16ed54508a96b1ce879998aceb7bf.jpg" alt="Woman shopping" class="details-page-in-article-image" loading="lazy" />
+        `,
+        summary: `A theory from a third-grade student exploring the historical reasons behind why women might take longer when shopping, linking it to ancient food-gathering practices.`
     }
 ];
 

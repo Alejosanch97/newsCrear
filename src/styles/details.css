@@ -64,13 +64,14 @@ body {
     margin-bottom: 2rem;
 }
 
-/* --- IMAGEN PRINCIPAL (Hero Image) --- */
 .details-page-hero-image {
     width: 100%;
-    /* Altura automática para que la imagen no se corte */
+    /* Establecemos una altura máxima en píxeles */
+    max-height: 450px; 
     height: auto;
-    /* Eliminamos la altura máxima para que la imagen se muestre completa */
-    object-fit: contain; /* Ajusta la imagen para que quepa completamente */
+    /* Ajustamos el "object-fit" para que la imagen no se distorsione */
+    object-fit: cover; 
+    object-position: center; /* Centramos la imagen para el recorte */
     border-radius: 12px 12px 0 0;
     margin-bottom: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
