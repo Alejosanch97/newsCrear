@@ -268,12 +268,47 @@ const articlesData = [
         inArticleImageUrl: 'https://i.pinimg.com/736x/9f/fd/f4/9ffdf42744e5ce5c24782916f202278d.jpg',
         date: 'August 29, 2025',
         fullArticleText: `
-            <p class="details-page-paragraph">It turns out that in the past, men were in chage of meat... women were in chage of vegetables, because they had to think carefully since some could be poisonous and could endanger the family. it was very difficult to choose the right vegetables. for example a girl sees 3 yellow, red and purple grapes, then looks at 3 iguanas where 2 of them die, and discovers taht yhe purple grapes are not poisonous and this knoledge has been passed down from generation to generation until 2023, our time.</p>
-            <p class="details-page-paragraph">BY: Student- Grado 3°</p>
+            <p class="details-page-paragraph">It turns out that in the past, men were in chage of meat... women were in chage of vegetables, because they had to think carefully since some could be poisonous and could endanger the family. it was very difficult to choose the right vegetables. for example a girl sees 3 yellow, red and purple grapes, then looks at 3 iguanas where 2 of them die, and discovers that the purple grapes are not poisonous and this knoledge has been passed down from generation to generation until 2023, our time.</p>
+            <p class="details-page-paragraph">BY: Mathias Manjarrez- Grado 3°</p>
             <img src="https://i.pinimg.com/1200x/23/d1/6e/23d16ed54508a96b1ce879998aceb7bf.jpg" alt="Woman shopping" class="details-page-in-article-image" loading="lazy" />
         `,
         summary: `A theory from a third-grade student exploring the historical reasons behind why women might take longer when shopping, linking it to ancient food-gathering practices.`
-    }
+    },
+    {
+        id: '12',
+        title: 'VINTAGE CAPS',
+        subtitle: 'Explore the history, culture, and value behind the vintage caps movement, from its origins in the 80s to the collector community in Colombia.',
+        author: 'Laura Valentina Forero Ballesteros',
+        category: 'Lifestyle',
+        tags: ['vintage', 'caps', 'collectors', 'fashion', 'Colombia', 'hip-hop'],
+        slug: 'vintage-caps-culture',
+        imageUrl: 'https://i.pinimg.com/1200x/a4/a1/98/a4a198459016a5edbf71796753f93a1f.jpg',
+        inArticleImageUrl: 'https://i.pinimg.com/1200x/a4/a1/98/a4a198459016a5edbf71796753f93a1f.jpg',
+        date: 'August 30, 2025',
+        fullArticleText: `
+            <p class="details-page-paragraph">Have you ever been walking along the street and you have seen someone with a dirty and old cap and you have felt that you are in danger?</p>
+            <p class="details-page-paragraph">Do you think that if that person wasn’t wearing that cap, you have felt more comfortable?… This kind of caps have a history behind that extravagant appearance.</p>
+            <img src="https://i.pinimg.com/736x/3e/7b/a9/3e7ba9c850a1c5abec12709ec437d40e.jpg" alt="Person wearing a vintage cap" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">A lot of people wear caps in order to protect them of the sun, because they are sports team supporters, to make it outfit looks much better or only keeping an eye because the designs, brand or style.</p>
+            <p class="details-page-paragraph">However, since 80’s until our days has showed up the vintage cap movement. People who love the classic style, ‘’treasure hunters’’ as they call themselves. This movement consists in a retro collection as any other collection, with the feature that those caps belong to sport teams, universities, athletes and cartoons. Which ones had a boom in 80’s and 90’s.</p>
+            <img src="https://i.pinimg.com/736x/c3/55/53/c355539bee098bc398b61816dace0d1b.jpg" alt="Collection of vintage caps" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">Do you have any idea where these caps come from? Despite many people think these caps are manufactured just in the USA, they are kind of wrong. Cause maybe you don’t think so but they were also produce in South Korea, Philippines, Taiwan and other Asian countries.</p>
+            <p class="details-page-paragraph">These caps had a remarkable starting due to they became popular when famous people such as athletes and rappers started wearing them, also hockey, American football, basketball and baseball supporters started to wearing them. Through this Americans sports and hip-hop references and even salsa’s singers this culture started to became popular in Colombia. Here people have give them a mayor value, here in Colombia there are different ways to get this caps.</p>
+            <p class="details-page-paragraph">One of the most popular are ‘’Tranzas’’ or bartering, you can do it in special events where collectors take their collections in order to promote this culture or selling them. There also another way to get this caps through specialized groups in Facebook. Or in Bogotá, you can find them in the 7th career near to cultural center or in San Victorino there you can buy them or make bartering.</p>
+            <p class="details-page-paragraph">So many people asks. Why this caps are so expensive? Or how people give them the commercial coast? By being a collectable article, the most important thing to have in the radar is the veracity, that the caps are original. Instead there are exceptions such as ‘’Aguilas’’ them were originally manufactured by Nike, but South Korea fabrics started making not official copies, I mean not original with sports teams, even so in our days, these costs around 300.000 Colombian pesos or more. There also some caps are made of wool or leather, having similar or more coast, without having into count that all of them are embroiled in thread.</p>
+            <img src="https://i.pinimg.com/736x/d6/b6/f3/d6b6f3f78ee89cf35f4ebbba9fb26424.jpg" alt="Collectors and their vintage caps" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">Other of the one most important thing to have in count about the high prices about these collection is the antiquity and how they are cared or conserved, by the way you can make them a restorations or how the collectors says ‘’give them love’’ and if they are easy to get, sometimes when a celebrity have wearied a cap it makes it more expensive or some caps weren’t manufactured in many units, that also make them more expensive, one of these can coast more than 800.000 COP.</p>
+            <h3>IMPORTANT FACTS</h3>
+            <ul>
+             <li>Caps commercial names can change through years or collectors. For example, before ‘’Destellos’’ they were ‘’Colisiones’’ and ‘’Electrocardiograma’’ is also called ‘’onda de choque’’.</li>
+             <li>In Colombia, these caps are one of the most stolen articles due to their value.</li>
+             <li>Collectors promote a code of respect among themselves and amateurs.</li>
+             <li>This cap culture has also been mixed with vintage jumpers and jerseys.</li>
+             <li>Starter is one of the favorite producer brands. It was created in 1971 and they bought licenses from major sports leagues (NBA, NFL, MLB, NHL) to make their jackets.</li>
+            </ul>
+        `,
+        summary: `Vintage caps have evolved from mere accessories to valuable collector's items. The article delves into the history of this movement, its connection to sports and music, and how it has become a popular culture in Colombia, with a focus on the unique ways collectors acquire and value these caps.`
+    },
 ];
 
 export const Details = () => {
