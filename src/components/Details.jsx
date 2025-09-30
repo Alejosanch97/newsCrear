@@ -309,6 +309,59 @@ const articlesData = [
         `,
         summary: `Vintage caps have evolved from mere accessories to valuable collector's items. The article delves into the history of this movement, its connection to sports and music, and how it has become a popular culture in Colombia, with a focus on the unique ways collectors acquire and value these caps.`
     },
+    {
+        id: '13',
+        title: 'CREACIONES CÓMICAS: LA IMAGINACIÓN DE TRANSICIÓN',
+        subtitle: 'Una colección de historietas únicas, llenas de creatividad y humor, dibujadas y contadas por los talentosos Niños de Transición.',
+        author: 'Niños de Transición',
+        category: 'Historietas Hechas por Niños',
+        tags: ['dibujo', 'infantil', 'creatividad', 'humor', 'escuela', 'historietas', 'comic'],
+        slug: 'historietas-creadas-por-ninos-transicion',
+        imageUrl: 'https://i.pinimg.com/736x/6f/5e/58/6f5e58a3611e0100a79479d1c24c703d.jpg', // Sugerencia: Usa la URL de la historieta del Perro Travieso.
+        inArticleImageUrl: null,
+        date: '30 de Septiembre de 2025',
+        fullArticleText: `
+        <h1 class="details-page-title">CREACIONES CÓMICAS: LA IMAGINACIÓN DE TRANSICIÓN</h1>
+        <p class="details-page-meta"><strong>Por Niños de Transición</strong> | <em>Septiembre 2025</em></p>
+        <p class="details-page-paragraph">¡Prepárense para un viaje lleno de color y creatividad! Los talentosos Niños de Transición nos presentan su increíble colección de historietas, donde cada página es una ventana a su imaginación. Desde mascotas traviesas hasta encuentros con extraterrestres, cada historia es un testimonio del poder narrativo y artístico de nuestros pequeños creadores. ¡Disfrútenlas!</p>
+
+        <h2 class="details-page-heading">1. El Perro Travieso y Mi Tarea 🐶</h2>
+        <p class="details-page-paragraph">Una mañana de apuros, ¡la tarea desapareció! Sigue las divertidas peripecias de un niño cuyo perro decide darle un uso inesperado a sus deberes, desparramando papeles y causando un pequeño caos camino a la escuela. </p>
+        <img src="https://i.pinimg.com/736x/1a/8f/f6/1a8ff65650cc3778ba8eb6b927791afa.jpg" alt="Historieta 1: El Perro Travieso y Mi Tarea" class="details-page-image" loading="lazy" />
+
+        <h2 class="details-page-heading">2. ¡Desastre en la Cocina! 🍳</h2>
+        <p class="details-page-paragraph">Una simple receta se convierte en un caos absoluto. Conoce el divertido momento en que la falta de una tapa en la licuadora provoca una explosión de ingredientes que decora toda la cocina, ¡un verdadero desastre culinario!</p>
+        <img src="https://i.pinimg.com/736x/97/1e/ca/971ecabeed1f7dcba4910e14f53f7939.jpg" alt="Historieta 2: Desastre en la Cocina" class="details-page-image" loading="lazy" />
+
+        <h2 class="details-page-heading">3. Persecución Canina y Nudo en el Poste 🐕🐈</h2>
+        <p class="details-page-paragraph">Un perro ve a su archienemigo felino y no duda en ir tras él. El dueño, con la correa en mano, termina amarrado y dando vueltas alrededor de un poste mientras el perro sigue su instinto de persecución. ¡La ley de la cuerda en acción!</p>
+        <img src="https://i.pinimg.com/736x/85/fc/37/85fc379d513404c7e40cd4dd1fc294e6.jpg" alt="Historieta 3: Persecución Canina y Nudo en el Poste" class="details-page-image" loading="lazy" />
+
+        <h2 class="details-page-heading">4. ¡Golazo... y Ventana Rota! ⚽</h2>
+        <p class="details-page-paragraph">En medio de un emocionante partido de fútbol, la puntería de los jugadores es un poco demasiado buena. Sigue el momento de terror (y risa) en que el balón se desvía y termina estrellando una ventana. ¿Quién se llevará la culpa?</p>
+        <img src="https://i.pinimg.com/736x/19/82/67/1982672f6f8d5056c3783ca6cc857dd4.jpg" alt="Historieta 4: Golazo y Ventana Rota" class="details-page-image" loading="lazy" />
+
+        <h2 class="details-page-heading">5. OVNI Confundido con Frisbee 👽</h2>
+        <p class="details-page-paragraph">¡Los marcianos han llegado! Pero su nave es tan pequeña que el perro del barrio la confunde con un disco volador. Una divertida historia de un primer contacto extraterrestre que termina en un juego canino inesperado.</p>
+        <img src="https://i.pinimg.com/736x/2c/39/3f/2c393f9ba71048ed672bf385491c4337.jpg" alt="Historieta 5: OVNI Confundido con Frisbee" class="details-page-image" loading="lazy" />
+        
+        <h2 class="details-page-heading">6. La Revancha del Balón 🥅</h2>
+        <p class="details-page-paragraph">El desastre de la ventana rota se repite, o quizás es el mismo momento contado desde otra perspectiva. El balón vuelve a ser el protagonista de un accidente, demostrando que jugar cerca de vidrios siempre es una mala idea.</p>
+        <img src="https://i.pinimg.com/736x/9f/58/32/9f5832009bc77c7a2f8379c5aea9c65b.jpg" alt="Historieta 6: La Revancha del Balón" class="details-page-image" loading="lazy" />
+
+        <hr class="details-page-divider" />
+        <div class="details-page-footer">
+          <p><strong>Autor:</strong> Niños de Transición</p>
+          <p><strong>Categoría:</strong> Historietas Hechas por Niños</p>
+          <p><strong>Publicado:</strong> Septiembre 2025</p>
+          <p class="Tags">dibujo, infantil, creatividad, humor, escuela, historietas, comic</p>
+          <p class="details-page-summary">
+            <strong>Resumen:</strong> Una encantadora colección de seis historietas creadas por los Niños de Transición, que muestran su imaginación, creatividad y habilidades narrativas a través de diversas aventuras y personajes cotidianos y fantásticos.
+          </p>
+        </div>
+    `,
+        summary: `Una encantadora colección de seis historietas creadas por los Niños de Transición, que muestran su imaginación, creatividad y habilidades narrativas a través de diversas aventuras y personajes cotidianos y fantásticos.`
+    },
 ];
 
 export const Details = () => {

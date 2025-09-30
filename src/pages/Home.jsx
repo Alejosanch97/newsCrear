@@ -150,6 +150,18 @@ const articles = [
         imageUrl: 'https://i.pinimg.com/1200x/a4/a1/98/a4a198459016a5edbf71796753f93a1f.jpg',
         date: 'August 30, 2025',
     },
+
+    {
+    id: '13',
+    title: 'CREACIONES CÓMICAS: LA IMAGINACIÓN DE TRANSICIÓN',
+    subtitle: 'Una colección de historietas únicas, llenas de creatividad y humor, contadas por Niños de Transición.',
+    author: 'Transición',
+    category: 'Historietas Hechas por Niños',
+    tags: ['dibujo', 'infantil', 'creatividad', 'humor', 'escuela', 'historietas'],
+    slug: 'historietas-creadas-por-ninos-transicion',
+    imageUrl: 'https://i.pinimg.com/736x/6f/5e/58/6f5e58a3611e0100a79479d1c24c703d.jpg', // Reemplaza esta línea
+    date: 'September 30, 2025',
+    },
 ];
 
 export const Home = () => {

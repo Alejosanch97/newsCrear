@@ -304,3 +304,14 @@ body {
         font-size: 1rem;
     }
 }
+
+/* --- IMÁGENES DENTRO DEL ARTÍCULO (Historietas) --- */
+.details-page-body img.details-page-image {
+    max-width: 90%; /* Ajusta el ancho para que no sea 100% y respire */
+    height: auto;
+    display: block; /* Asegura que la imagen es un bloque para centrarla */
+    margin: 2rem auto; /* Centra la imagen y da espacio arriba/abajo */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd; /* Añade un borde sutil para enmarcar el dibujo */
+}
