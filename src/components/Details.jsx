@@ -362,6 +362,60 @@ const articlesData = [
     `,
         summary: `Una encantadora colección de seis historietas creadas por los Niños de Transición, que muestran su imaginación, creatividad y habilidades narrativas a través de diversas aventuras y personajes cotidianos y fantásticos.`
     },
+    {
+        id: '14',
+        title: 'CLEAN HANDS, HEALTHY LIFE: POWER OF ANTIBACTERIAL GEL',
+        subtitle: 'The origin, importance, and simple formula to create your own disinfectant gel.',
+        author: 'Dylan Galindo, Matias Rodriguez, Victoria Torres, Juan Pablo Medina Doncel',
+        category: 'Science and Health',
+        tags: ['hygiene', 'health', 'science', 'experiment', 'pandemic', 'alcohol', 'gel', 'tutorial'],
+        slug: 'the-power-of-antibacterial-gel-formula-and-history',
+        imageUrl: 'https://i.pinimg.com/736x/02/b2/a3/02b2a33dbfe8bb7250a7e93e0984305d.jpg', // Replace this URL with an appropriate image
+        inArticleImageUrl: 'https://i.pinimg.com/736x/02/b2/a3/02b2a33dbfe8bb7250a7e93e0984305d.jpg', // Support image inside the article
+        date: 'October 16, 2025',
+        fullArticleText: `
+        
+        <h2 class="details-page-heading">Origin</h2>
+        <p class="details-page-paragraph">
+        For more than 100 years, people have trusted alcohol to clean wounds and protect themselves from germs. But carrying liquid alcohol everywhere was not easy. In the late 20th century, scientists and health workers found a friendlier way: turning alcohol into a gel. This new texture made it safer and more practical to use on our hands. Hospitals were the first places to use it daily, and soon it became part of everyone’s life, especially during health crises like the 2020 pandemic.
+        </p>
+
+        <h2 class="details-page-heading">How to make it?</h2>
+        <ul class="details-page-list">
+            <li>Measure 100 ml of ethyl alcohol using a graduated cylinder.</li>
+            <li>Pour the alcohol into a beaker.</li>
+            <li>Measure 80 ml of water.</li>
+            <li>Add the water to the beaker.</li>
+            <li>Stir gently with a glass rod.</li>
+            <li>Weigh 1.5 g of carbopol on a watch glass.</li>
+            <li>Sift the carbopol until it becomes a fine powder.</li>
+            <li>Add the carbopol to the beaker with the mixture.</li>
+            <li>Mix patiently, avoiding lumps.</li>
+            <li>With a pipette, add 1 ml of glycerin to keep the hands soft.</li>
+            <li>Add 1 ml of triethanolamine to give the gel its texture.</li>
+            <li>Add 1 ml of cherry fragrance (or another scent you like) for a pleasant touch.</li>
+            <li>Stir everything until smooth.</li>
+            <li>Pour the gel into a clean container to use whenever you need.</li>
+        </ul>
+        <img src="https://i.pinimg.com/736x/40/ed/d7/40edd791d0412ee07b3ae361f987fb42.jpg" alt="Process of making antibacterial gel" class="details-page-image" loading="lazy" />
+
+        <h2 class="details-page-heading">Importance</h2>
+        <p class="details-page-paragraph">
+        Antibacterial gel is more than just a product, it is a daily companion.
+        </p>
+        <ul class="details-page-list">
+            <li>It protects us from germs that can cause illness.</li>
+            <li>It is there when we cannot find water and soap.</li>
+            <li>It gives peace of mind in schools, on buses, in hospitals, and even during trips.</li>
+            <li>Its small bottle often fits in a pocket or backpack, reminding us to care for ourselves and others.</li>
+            <li>Using it has become a simple act of kindness: every time we clean our hands, we also protect those around us.</li>
+        </ul>
+        <p class="details-page-paragraph">
+        Antibacterial gel is not only science in action, it is also a way to show love and responsibility for our community.
+        </p>
+    `,
+        summary: `Explores the history and current relevance of antibacterial gel, from its origins in the late 20th century to its fundamental role during the 2020 pandemic. Additionally, the article provides a detailed guide and ingredient list for making your own gel at home, emphasizing its importance as a tool for personal and community protection.`
+    },
 ];
 
 export const Details = () => {

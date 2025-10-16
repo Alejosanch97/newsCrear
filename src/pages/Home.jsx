@@ -162,6 +162,17 @@ const articles = [
     imageUrl: 'https://i.pinimg.com/736x/6f/5e/58/6f5e58a3611e0100a79479d1c24c703d.jpg', // Reemplaza esta línea
     date: 'September 30, 2025',
     },
+    {
+        id: '14',
+        title: 'CLEAN HANDS, HEALTHY LIFE',
+        subtitle: 'The origin, importance, and simple formula to create your own disinfectant gel at home.',
+        author: 'Dylan Galindo, Matias Rodriguez, Victoria Torres, Juan Pablo Medina Doncel',
+        category: 'Science and Health',
+        tags: ['hygiene', 'health', 'science', 'experiment', 'pandemic', 'alcohol', 'gel'],
+        slug: 'the-power-of-antibacterial-gel-formula-and-history',
+        imageUrl: 'https://i.pinimg.com/1200x/b0/17/45/b01745dcce6b1428f99c6673b47613b3.jpg', // Replace this URL with an appropriate image
+        date: 'October 16, 2025',
+    },
 ];
 
 export const Home = () => {
