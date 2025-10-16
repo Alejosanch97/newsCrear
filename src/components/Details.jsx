@@ -397,7 +397,7 @@ const articlesData = [
             <li>Stir everything until smooth.</li>
             <li>Pour the gel into a clean container to use whenever you need.</li>
         </ul>
-        <img src="https://i.pinimg.com/736x/40/ed/d7/40edd791d0412ee07b3ae361f987fb42.jpg" alt="Process of making antibacterial gel" class="details-page-image" loading="lazy" />
+        <img src="https://i.pinimg.com/736x/57/b5/13/57b513c348f42895fc1572fab937dea1.jpg" alt="Process of making antibacterial gel" class="details-page-image" loading="lazy" />
 
         <h2 class="details-page-heading">Importance</h2>
         <p class="details-page-paragraph">
