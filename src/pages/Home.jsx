@@ -1,5 +1,6 @@
+import React, { useMemo, useEffect } from "react"; // Añadimos useEffect
+import { useNavigate, useLocation } from "react-router-dom"; // Añadimos useLocation
 import "../styles/home.css";
-import { useNavigate } from "react-router-dom"; // Importa useNavigate para la navegación
 
 // Define la data de tus artículos aquí
 // Esta data es la misma que ya tenías, pero es importante que esté presente en el componente
@@ -176,64 +177,100 @@ const articles = [
 ];
 
 export const Home = () => {
-    // Ordena los artículos por fecha para que el más reciente aparezca primero
-    const sortedArticles = [...articles].sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    // El primer artículo será el destacado
-    const featuredArticle = sortedArticles[0];
-    // El resto irá en la cuadrícula
-    const otherArticles = sortedArticles.slice(1);
-
-    // Obtén la función de navegación de react-router-dom
     const navigate = useNavigate();
+    const location = useLocation(); // <--- Escuchamos la URL
 
-    // Función para manejar el clic en el botón "Read More"
-    const handleReadMore = (articleSlug) => {
-        // Navega a la ruta /details/:articleSlug
-        navigate(`/details/${articleSlug}`);
+    // LEER EL FILTRO DE LA URL
+    // Si la URL es /?filter=CULTURA, filter será "CULTURA"
+    const queryParams = new URLSearchParams(location.search);
+    const filter = queryParams.get("filter") || "TODOS";
+
+    const filteredArticles = useMemo(() => {
+        const sorted = [...articles].sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        if (filter === "TODOS") return sorted;
+        
+        return sorted.filter(art => {
+            const cat = art.category.toUpperCase();
+            if (filter === "NOTICIAS") {
+                return ["ANNOUNCEMENTS", "TECHNOLOGY", "SCIENCE AND HEALTH", "FUN FACTS"].includes(cat);
+            }
+            if (filter === "CULTURA") {
+                return ["CREATIVE CORNER", "ARTS & CULTURE", "MYTHS & LEGENDS", "PERSONAL STORIES", "COOKING", "HISTORIETAS HECHAS POR NIÑOS", "PRIMARY", "LIFESTYLE"].includes(cat);
+            }
+            if (filter === "DEPORTES") {
+                return cat === "SPORTS";
+            }
+            return false;
+        });
+    }, [filter]);
+
+    const featuredArticle = filteredArticles[0];
+    const otherArticles = filteredArticles.slice(1);
+
+    const handleReadMore = (slug) => {
+        navigate(`/details/${slug}`);
     };
 
     return (
-        <div className="home-container">
-            {/* Sección de Artículo Destacado */}
-            {featuredArticle && (
-                <section className="featured-article">
-                    <div className="featured-image-wrapper">
-                        <img src={featuredArticle.imageUrl} alt={featuredArticle.title} className="featured-image" />
-                    </div>
-                    <div className="featured-content">
-                        <span className="article-category">{featuredArticle.category}</span>
-                        <h2 className="article-title">{featuredArticle.title}</h2>
-                        <p className="article-subtitle">{featuredArticle.subtitle}</p>
-                        <p className="article-meta">By {featuredArticle.author} | {featuredArticle.date}</p>
-                        {/* Usa la función handleReadMore para navegar */}
-                        <button onClick={() => handleReadMore(featuredArticle.slug)} className="read-more-button">
-                            Read More
-                        </button>
-                    </div>
-                </section>
-            )}
+        <main className="home-wrapper">
+            <header className="section-header">
+                {/* QUITAMOS LOS BOTONES DE AQUÍ PARA QUE NO HAYA DUPLICIDAD */}
+                <h1 className="main-headline">
+                    {filter === "TODOS" ? "Periódico Escolar CREAR" : filter}
+                </h1>
+            </header>
 
-            {/* Cuadrícula de Otros Artículos */}
-            <section className="other-articles-grid">
-                {otherArticles.map(article => (
-                    <article key={article.id} className="news-card">
-                        <div className="news-card-image-wrapper">
-                            <img src={article.imageUrl} alt={article.title} className="news-card-image" />
+            <div className="newspaper-layout">
+                {featuredArticle ? (
+                    <section className="hero-section" onClick={() => handleReadMore(featuredArticle.slug)}>
+                        <div className="hero-grid">
+                            <div className="hero-image-container">
+                                <img src={featuredArticle.imageUrl} alt={featuredArticle.title} />
+                                <span className="floating-badge">{featuredArticle.category}</span>
+                            </div>
+                            <div className="hero-text">
+                                <span className="hero-eyebrow">DESTACADO</span>
+                                <h2>{featuredArticle.title}</h2>
+                                <p className="hero-description">{featuredArticle.subtitle}</p>
+                                <div className="hero-meta">
+                                    <span className="author">Por {featuredArticle.author}</span>
+                                    <span className="dot"></span>
+                                    <span className="date">{featuredArticle.date}</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="news-card-content">
-                            <span className="article-category">{article.category}</span>
-                            <h3 className="news-card-title">{article.title}</h3>
-                            <p className="news-card-subtitle">{article.subtitle}</p>
-                            <p className="news-card-meta">By {article.author} | {article.date}</p>
-                            {/* Usa la función handleReadMore para navegar */}
-                            <button onClick={() => handleReadMore(article.slug)} className="read-more-button">
-                                Read More
-                            </button>
-                        </div>
-                    </article>
-                ))}
-            </section>
-        </div>
+                    </section>
+                ) : (
+                    <div className="no-results">No se encontraron artículos en la sección {filter}.</div>
+                )}
+
+                <hr className="editorial-divider" />
+
+                <section className="articles-grid">
+                    {otherArticles.map(article => (
+                        <article 
+                            key={article.id} 
+                            className="mini-card"
+                            onClick={() => handleReadMore(article.slug)}
+                        >
+                            <div className="mini-img">
+                                <img src={article.imageUrl} alt={article.title} />
+                            </div>
+                            <div className="mini-content">
+                                <span className="mini-category">{article.category}</span>
+                                <h3 className="mini-title">{article.title}</h3>
+                                <p className="mini-excerpt">{article.subtitle}</p>
+                                <div className="mini-meta">
+                                    <span className="mini-date">{article.date}</span>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </section>
+            </div>
+        </main>
     );
 };
+
+export default Home;

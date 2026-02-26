@@ -1,368 +1,543 @@
-/* Import Google Font for consistency (Inter) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+/* Importación de fuentes: Playfair para elegancia, Outfit para modernidad */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700;800&display=swap');
 
-/* --- PALETA DE COLORES --- */
 :root {
-    --color-primary-bg: #ffffff; /* Fondo principal (azul medianoche oscuro) */
-    --color-secondary-bg: #16213E; /* Fondo de tarjetas secundarias (azul marino) */
-    --color-highlight: #E94560; /* Color de acento vibrante (rojo coral) */
-    --color-text-primary: #FFFFFF; /* Color de texto principal */
-    --color-text-secondary: #B0B0C0; /* Color de texto secundario/meta */
-    --color-divider: rgba(255, 255, 255, 0.1); /* Separador sutil */
-    --color-card-shadow: rgba(0, 0, 0, 0.4);
-    --color-button-hover: #D73351;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --accent-red: #C00000;
+    --accent-blue: #002060;
+    --white: #ffffff;
+    --bg-light: #fcfcfc;
+    --border-color: #eeeeee;
 }
 
-
-/* General body styling for background and font */
+/* Reinicio y base */
 body {
-    background-color: var(--color-primary-bg); /* Un gris muy claro, casi blanco, para el fondo general */
-    color: var(--color-text-primary); /* Texto oscuro para el fondo claro */
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    background-color: var(--white);
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
     margin: 0;
-    padding: 0;
 }
 
-/* Main container for the home page content */
-.home-container {
-    max-width: 1200px;
-    margin: 2rem auto; /* Centra el contenido con margen superior/inferior */
-    padding: 0 1.5rem; /* Relleno horizontal */
+.home-wrapper {
+    max-width: 1300px;
+    margin: 100px auto 40px; /* Margen superior para no chocar con el navbar */
+    padding: 0 20px;
+    animation: fadeIn 0.8s ease-out;
 }
 
-/* Featured Article Section (Tarjeta destacada) */
-.featured-article {
+/* HEADER Y FILTROS (PILLS) */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.category-pills {
     display: flex;
-    flex-direction: column; /* Apilado en pantallas pequeñas */
-    background-color: var(--color-secondary-bg); /* Fondo gris oscuro para la tarjeta destacada */
-    border-radius: 16px; /* Bordes más redondeados */
-    box-shadow: 0 12px 30px var(--color-card-shadow); /* Sombra más pronunciada para profundidad */
-    overflow: hidden;
-    margin-bottom: 3.5rem; /* Más espacio inferior */
-    position: relative;
-    border: 1px solid var(--color-divider); /* Borde sutil para definir la tarjeta */
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
-.featured-image-wrapper {
-    width: 100%;
-    height: 450px; /* Altura un poco mayor para la imagen destacada */
-    overflow: hidden;
-    background-color: #1a1a1a; /* Fondo más oscuro para la imagen */
-}
-
-.featured-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out; /* Transición más suave */
-}
-
-.featured-article:hover .featured-image {
-    transform: scale(1.08); /* Zoom ligeramente mayor al pasar el ratón */
-}
-
-.featured-content {
-    padding: 2.5rem; /* Más relleno para el contenido destacado */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.featured-content .article-category {
-    font-size: 0.95rem; /* Tamaño de fuente ligeramente mayor */
-    font-weight: 700; /* Más negrita */
-    color: var(--color-highlight); /* Amarillo para la categoría, consistente con la navbar */
+.pill {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 8px 22px;
+    border-radius: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 0.75rem; /* Más espacio */
-    letter-spacing: 0.05em; /* Espaciado entre letras */
-}
-
-.featured-content .article-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem; /* Título más grande para la noticia destacada */
-    font-weight: 800; /* Más negrita para impacto */
-    color: var(--color-text-primary); /* Texto blanco en fondo oscuro */
-    margin: 0.8rem 0 1.2rem; /* Ajuste de márgenes */
-    line-height: 1.15; /* Interlineado más cerrado */
-}
-
-.featured-content .article-subtitle {
-    font-size: 1.3rem; /* Subtítulo más grande */
-    color: var(--color-text-secondary); /* Gris claro para el subtítulo */
-    margin-bottom: 2rem; /* Más espacio */
-}
-
-.featured-content .article-meta {
-    font-size: 0.95rem;
-    color: var(--color-text-secondary); /* Gris más oscuro para meta info */
-    margin-bottom: 1.8rem;
-}
-
-/* Other Articles Grid (Rejilla de otras noticias) */
-.other-articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas un poco más anchas */
-    gap: 2.5rem; /* Más espacio entre las tarjetas */
-}
-
-/* Individual News Card Styling (Estilo de tarjeta individual) */
-.news-card {
-    background-color: var(--color-secondary-bg); /* Fondo gris oscuro para las tarjetas */
-    border-radius: 12px;
-    box-shadow: 0 8px 20px var(--color-card-shadow); /* Sombra mejorada */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--color-divider); /* Borde sutil */
-}
-
-.news-card:hover {
-    transform: translateY(-8px); /* Efecto de elevación más pronunciado */
-    box-shadow: 0 16px 30px var(--color-card-shadow); /* Sombra más fuerte al pasar el ratón */
-}
-
-.news-card-image-wrapper {
-    width: 100%;
-    height: 240px; /* Altura un poco mayor para las imágenes de las tarjetas */
-    overflow: hidden;
-    background-color: #1a1a1a;
-}
-
-.news-card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-}
-
-.news-card:hover .news-card-image {
-    transform: scale(1.1); /* Zoom ligeramente mayor */
-}
-
-.news-card-content {
-    padding: 1.8rem; /* Más relleno */
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.news-card-content .article-category {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--color-highlight); /* Amarillo para categorías */
-    text-transform: uppercase;
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.04em;
-}
-
-.news-card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem; /* Títulos un poco más grandes */
-    font-weight: 700;
-    color: var(--color-text-primary); /* Texto blanco en fondo oscuro */
-    margin: 0.6rem 0 1rem;
-    line-height: 1.2;
-}
-
-.news-card-subtitle {
-    font-size: 1.05rem; /* Subtítulos ligeramente más grandes */
-    color: var(--color-text-secondary); /* Gris claro */
-    margin-bottom: 1.2rem;
-    flex-grow: 1;
-}
-
-.news-card-meta {
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
-    margin-top: auto;
-    margin-bottom: 1.2rem;
-}
-
-/* Read More Button */
-.read-more-button {
-    background-color: var(--color-highlight); /* Amarillo vibrante */
-    color: var(--color-text-primary); /* Texto oscuro */
-    border: none;
-    padding: 0.9rem 1.8rem; /* Más padding */
-    border-radius: 8px; /* Bordes ligeramente más definidos */
-    font-size: 1.05rem;
-    font-weight: 700; /* Más negrita */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    align-self: flex-start;
-    box-shadow: 0 4px 8px rgba(233, 69, 96, 0.3); /* Sombra sutil para el botón */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.read-more-button:hover {
-    background-color: var(--color-button-hover);
-    transform: translateY(-3px); /* Mayor elevación en hover */
-    box-shadow: 0 8px 16px rgba(233, 69, 96, 0.4); /* Sombra más fuerte */
+.pill:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
 }
 
-.read-more-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(233, 69, 96, 0.2);
+.pill.active {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 15px rgba(0, 32, 96, 0.2);
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-    .featured-article {
-        flex-direction: row;
-    }
-
-    .featured-image-wrapper {
-        flex: 1;
-        height: auto;
-        max-height: 450px;
-    }
-
-    .featured-image {
-        height: 100%;
-    }
-
-    .featured-content {
-        flex: 1;
-    }
+.main-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--text-main);
+    margin: 0;
+    letter-spacing: -1px;
 }
 
-@media (max-width: 767px) {
-    .home-container {
-        margin: 1.5rem auto;
-        padding: 0 1rem;
-    }
-
-    .featured-content .article-title {
-        font-size: 2.2rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
-    }
-
-    .featured-content .article-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .news-card-title {
-        font-size: 1.6rem;
-    }
-
-    .featured-article {
-        margin-bottom: 2.5rem;
-    }
-}
-/* Featured Article Section (Tarjeta destacada) */
-.featured-article {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-secondary-bg);
-    border-radius: 16px;
-    box-shadow: 0 12px 30px var(--color-card-shadow);
+/* ARTÍCULO DESTACADO (HERO) */
+.hero-section {
+    cursor: pointer;
+    margin-bottom: 80px;
+    background: var(--bg-light);
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 3.5rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0;
+    align-items: stretch;
+}
+
+.hero-image-container {
     position: relative;
-    border: 1px solid var(--color-divider);
-}
-
-.featured-image-wrapper {
-    width: 100%;
-    /* Altura fija para el contenedor de la imagen en móviles,
-       para que no sea demasiado grande */
-    height: 300px;
+    height: 500px;
     overflow: hidden;
-    background-color: #1a1a1a;
 }
 
-.featured-image {
+.hero-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Esto hace que la imagen se alinee a la parte superior de su contenedor */
-    object-position: top;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease;
 }
 
-.featured-article:hover .featured-image {
+.hero-section:hover img {
     transform: scale(1.05);
 }
 
-.featured-content {
-    padding: 2rem;
+.floating-badge {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: var(--accent-red);
+    color: white;
+    padding: 6px 16px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.hero-text {
+    padding: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+    justify-content: center;
 }
 
-.featured-content .article-category {
-    font-size: 0.9rem;
+.hero-eyebrow {
+    color: var(--accent-red);
     font-weight: 700;
-    color: var(--color-highlight);
-    text-transform: uppercase;
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.04em;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
 }
 
-.featured-content .article-title {
+.hero-text h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--color-text-primary);
-    margin: 0.6rem 0 1rem;
-    line-height: 1.2;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    color: var(--text-main);
 }
 
-.featured-content .article-subtitle {
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    background: var(--accent-red);
+    border-radius: 50%;
+}
+
+/* SEPARADOR EDITORIAL */
+.editorial-divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 40px 0;
+}
+
+/* GRILLA DE NOTICIAS SECUNDARIAS */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+    margin-top: 50px;
+}
+
+.mini-card {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.mini-card:hover {
+    opacity: 0.85;
+}
+
+.mini-img {
+    aspect-ratio: 16/10;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    background: #f0f0f0;
+}
+
+.mini-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mini-category {
+    color: var(--accent-red);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mini-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 12px 0;
+    line-height: 1.3;
+    color: var(--text-main);
+}
+
+.mini-excerpt {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.mini-date {
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 500;
+}
+
+.no-results {
+    text-align: center;
+    padding: 100px 0;
     font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    font-style: italic;
 }
 
-.featured-content .article-meta {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.2rem;
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-image-container { height: 400px; }
+    .hero-text { padding: 40px; }
+    .articles-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Responsive adjustments for the featured article */
-@media (min-width: 768px) {
-    .featured-article {
-        flex-direction: row;
-        max-height: 350px;
+@media (max-width: 768px) {
+    .main-headline { font-size: 2.5rem; }
+    .hero-text h2 { font-size: 2.2rem; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .home-wrapper { margin-top: 80px; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap');
+
+:root {
+    --text-main: #121212;
+    --text-muted: #4a4a4a;
+    --accent-red: #C00000;
+    --accent-blue: #002060;
+    --white: #ffffff;
+    --bg-light: #f8f9fa;
+    --border-color: #d1d1d1; /* Borde un poco más oscuro para definición */
+}
+
+body {
+    background-color: #f4f4f4; /* Fondo sutil para que las cards blancas resalten */
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+}
+
+.home-wrapper {
+    max-width: 1240px;
+    margin: 120px auto 60px;
+    padding: 0 25px;
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- TITULARES --- */
+.main-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+/* --- ARTÍCULO DESTACADO (HERO) CON ESTILO DE PORTADA --- */
+.hero-section {
+    cursor: pointer;
+    margin-bottom: 60px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+}
+
+.hero-section:hover {
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    border-color: var(--accent-blue);
+}
+
+.hero-text {
+    padding: 60px;
+    border-left: 1px solid var(--border-color); /* Línea divisoria interna */
+}
+
+.hero-text h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.hero-text h2:hover {
+    color: var(--accent-blue);
+}
+
+/* --- GRILLA DE NOTICIAS (CARDS MEJORADAS) --- */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    border-top: 2px solid var(--text-main); /* Línea de cabecera de grilla */
+    padding-top: 40px;
+}
+
+.mini-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 20px;
+    border: 1px solid transparent; /* Para evitar saltos en el hover */
+    border-top: 4px solid var(--accent-blue); /* El toque elegante: borde superior de color */
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.mini-card:hover {
+    border-color: var(--border-color);
+    border-top-color: var(--accent-red);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+}
+
+/* Estilo para las imágenes en las cards */
+.mini-img {
+    margin: -20px -20px 20px -20px; /* Expande la imagen al borde de la card */
+    aspect-ratio: 16/9;
+    filter: grayscale(20%); /* Efecto periódico vintage */
+    transition: filter 0.3s ease;
+}
+
+.mini-card:hover .mini-img {
+    filter: grayscale(0%);
+}
+
+.mini-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0;
+    /* Efecto de subrayado elegante al hover */
+    background-image: linear-gradient(var(--accent-blue), var(--accent-blue));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+}
+
+.mini-card:hover .mini-title {
+    background-size: 100% 2px;
+}
+
+.mini-excerpt {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empuja la fecha hacia abajo para que todas las cards alineen */
+}
+
+/* --- META INFORMACIÓN --- */
+.mini-meta {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-category {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.65rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE DEFINITIVO - HOME PERIODICO CREAR
+   ========================================================================== */
+
+/* 1. IPADS Y TABLETS GRANDES (Hasta 1100px) */
+@media (max-width: 1100px) {
+    .home-wrapper {
+        margin-top: 100px;
+        padding: 0 20px;
     }
 
-    .featured-image-wrapper {
-        flex: 1;
-        height: 100%;
-        max-height: 350px;
+    .main-headline {
+        font-size: 3.2rem;
     }
 
-    .featured-image {
-        height: 100%;
-        object-fit: cover;
-        /* Esto hace que la imagen se alinee a la parte superior de su contenedor */
-        object-position: top;
+    /* El Hero se ajusta ligeramente */
+    .hero-text {
+        padding: 40px;
     }
 
-    .featured-content {
-        flex: 1;
-        padding: 1.5rem;
+    .hero-text h2 {
+        font-size: 2.8rem;
+    }
+}
+
+/* 2. TABLETS Y IPADS MINI (Hasta 950px) */
+@media (max-width: 950px) {
+    /* La grilla pasa de 3 a 2 columnas para que las cards no se vean apretadas */
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 
-    .featured-content .article-title {
+    .hero-grid {
+        grid-template-columns: 1fr; /* Apilamos imagen y texto */
+    }
+
+    .hero-text {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding: 35px;
+    }
+
+    .hero-image-container {
+        height: 380px;
+    }
+}
+
+/* 3. CELULARES GRANDES Y PHABLETS (Hasta 768px) */
+@media (max-width: 768px) {
+    .main-headline {
+        font-size: 2.5rem;
+        text-align: center;
+        display: block;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .category-pills {
+        gap: 8px;
+    }
+
+    .pill {
+        padding: 6px 15px;
+        font-size: 0.65rem;
+    }
+}
+
+/* 4. CELULARES PEQUEÑOS (Hasta 550px) */
+@media (max-width: 550px) {
+    .home-wrapper {
+        margin-top: 90px; /* Ajuste para navbar móvil */
+        padding: 0 15px;
+    }
+
+    /* Grilla de 1 sola columna: Lectura cómoda en vertical */
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 30px;
+    }
+
+    .main-headline {
         font-size: 2rem;
+        letter-spacing: -0.5px;
     }
 
-    .featured-content .article-subtitle {
-        font-size: 1.1rem;
+    .hero-text {
+        padding: 25px 20px;
     }
 
-    .featured-content .article-meta {
-        margin-bottom: 1rem;
+    .hero-text h2 {
+        font-size: 1.8rem;
     }
-}
 
-@media (max-width: 767px) {
-    .featured-article {
-        margin-bottom: 2.5rem;
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustamos las mini cards para que la imagen no sea tan gigante en móvil */
+    .mini-card {
+        padding: 15px;
+    }
+
+    .mini-title {
+        font-size: 1.4rem;
+    }
+
+    .mini-img {
+        margin: -15px -15px 15px -15px;
+    }
+
+    .floating-badge {
+        top: 15px;
+        left: 15px;
+        font-size: 0.6rem;
+        padding: 4px 10px;
     }
 }

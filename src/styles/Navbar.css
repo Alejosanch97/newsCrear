@@ -1,194 +1,267 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital@0;1&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #f4f4f4;
+:root {
+    --minimal-blue: #002060;
+    --minimal-red: #C00000;
+    --minimal-bg: #ffffff;
+    --nav-height: 80px;
 }
 
-/* Navbar container styling */
-.navbar {
-    background-color: #1a1a1a;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.nav-minimal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: var(--minimal-bg);
+    border-bottom: 1px solid #eeeeee;
+    z-index: 2000;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* Inner container */
-.navbar .container {
-    max-width: 1200px;
+.nav-minimal.is-scrolled {
+    height: 70px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.nav-wrapper {
+    max-width: 1400px;
+    height: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Brand/Logo styling */
-.navbar-brand {
-    color: #ffffff;
-    /* Usamos flexbox para alinear el escudo y el texto */
+/* BRANDING - El giro de 180 grados */
+.nav-logo-area {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espacio entre el escudo y el texto */
-    font-size: 1.5rem;
-    font-weight: 700;
     text-decoration: none;
-    letter-spacing: -0.02em;
-    transition: color 0.3s ease;
-    border-radius: 6px;
-    padding: 0.2rem 0.5rem;
+    gap: 15px;
 }
 
-.navbar-brand:hover {
-    color: #FFD700;
-}
-
-/* Estilo para el escudo */
-.navbar-logo {
-    height: 70px; /* Tamaño del escudo en escritorio */
+.nav-shield-simple {
+    height: 45px;
     width: auto;
+    /* Si el logo es blanco, usamos un filtro para que sea azul o negro en fondo blanco */
+    filter: brightness(0) saturate(100%) invert(11%) sepia(59%) saturate(4649%) hue-rotate(220deg) brightness(91%) contrast(106%);
 }
 
-/* Navigation links */
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.nav-divider {
+    width: 1px;
+    height: 25px;
+    background: #dddddd;
+}
+
+.nav-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--minimal-blue);
+    letter-spacing: -0.5px;
+}
+
+/* LINKS - Tipografía espaciada y ligera */
+.nav-links-minimal {
     display: flex;
-    gap: 2.5rem;
+    gap: 40px;
+    list-style: none;
 }
 
-.nav-links li a {
-    color: #e0e0e0;
+.nav-links-minimal a {
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
-    border-radius: 4px;
+    color: #666666;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
 }
 
-.nav-links li a:hover {
-    color: #FFD700;
+.nav-links-minimal a:hover, .nav-links-minimal a.current {
+    color: var(--minimal-red);
 }
 
-/* Active link - text stays white, yellow border below */
-.nav-links li a.active-link {
-    color: #ffffff;
+.nav-links-minimal a.current {
     font-weight: 600;
 }
 
-.nav-links li a.active-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -8px;
-    height: 3px;
-    background-color: #FFD700;
-    border-radius: 2px;
-    transform: scaleX(1);
-    transition: transform 0.3s ease-out;
+/* ACCIONES Y FECHA */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Hamburger menu */
-.hamburger {
+.nav-live-date {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #eeeeee;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* BURGER MINIMALISTA */
+.nav-burger {
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
+    background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
-    z-index: 10;
 }
 
-.hamburger:focus {
-    outline: none;
+.nav-burger span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: var(--minimal-blue);
+    margin: 6px 0;
+    transition: 0.3s;
 }
 
-.hamburger .bar {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
+/* ==========================================================================
+   RESPONSIVE DESIGN - PERIODICO CREAR
+   ========================================================================== */
+
+/* 1. TABLETS Y IPADS (Grandes - hasta 1024px) */
+@media (max-width: 1024px) {
+    .nav-wrapper {
+        padding: 0 30px;
+    }
+
+    .main-headline {
+        font-size: 3rem;
+    }
+
+    /* La grilla pasa de 3 a 2 columnas */
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Ajuste del Hero para que no ocupe tanto espacio vertical */
+    .hero-image-container {
+        height: 350px;
+    }
+
+    .hero-text {
+        padding: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-wrap: wrap;
-        justify-content: space-between;
+/* 2. TABLETS PEQUEÑAS Y MÓVILES (Medios - hasta 900px) */
+@media (max-width: 900px) {
+    /* --- NAVBAR MOBILE --- */
+    .nav-burger {
+        display: block;
+        z-index: 2005;
     }
 
-    .hamburger {
-        display: flex;
+    /* Animación del icono Hamburguesa */
+    .nav-burger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
     }
-    
-    /* Ajustamos el tamaño del logo para móviles */
-    .navbar-logo {
-        height: 25px; 
+    .nav-burger.open span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    .nav-burger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .nav-links {
+    .nav-links-minimal {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--white);
         flex-direction: column;
-        width: 100%;
-        background-color: #2a2a2a;
-        position: absolute;
-        top: 60px;
-        left: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+    }
+
+    .nav-links-minimal.is-active {
         right: 0;
-        transform: translateY(-100%);
-        transition: transform 0.4s ease-in-out;
-        padding: 1rem 1.5rem;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        z-index: 5;
-        border-radius: 0 0 8px 8px;
     }
 
-    .nav-links.active {
-        transform: translateY(0);
+    .nav-links-minimal a {
+        font-size: 1.8rem;
+        font-family: 'Playfair Display', serif;
+        text-transform: capitalize;
+        letter-spacing: 0;
     }
 
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-        margin: 0.75rem 0;
+    .nav-live-date {
+        display: none; /* Ocultamos fecha en móvil para limpiar espacio */
     }
-    
-    /* Corregimos el estilo para los enlaces de navegación */
-    .nav-links li a {
-        display: block;
-        padding: 0.75rem 0;
+
+    /* --- CONTENIDO --- */
+    .hero-grid {
+        grid-template-columns: 1fr; /* Imagen arriba, texto abajo */
+    }
+
+    .hero-text {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+    }
+}
+
+/* 3. CELULARES (Pequeños - hasta 600px) */
+@media (max-width: 600px) {
+    .home-wrapper {
+        margin-top: 90px;
+        padding: 0 15px;
+    }
+
+    .main-headline {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+
+    /* Grilla de una sola columna para lectura cómoda */
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-text {
+        padding: 25px 15px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .mini-card {
+        padding: 15px;
+    }
+
+    .mini-title {
+        font-size: 1.4rem;
+    }
+
+    /* Ajuste de Branding para pantallas muy pequeñas */
+    .nav-brand-name {
         font-size: 1.2rem;
     }
     
-    /* También corregí el nombre de la clase aquí, de 'navbar-brand' a 'navbar-link' para ser más específico */
-    .nav-links li .navbar-link {
-        display: block;
-        padding: 0.75rem 0;
-        font-size: 1.2rem;
-        /* Asegúrate de que los enlaces dentro del menú móvil tengan un color consistente */
-        color: #fff;
-    }
-
-    .nav-links li a.active-link::after {
-        display: none;
-    }
-
-    .nav-links li a.active-link {
-        background-color: rgba(255, 215, 0, 0.1);
-        border-radius: 6px;
-        color: #ffffff;
+    .nav-logo-area {
+        gap: 8px;
     }
 }
