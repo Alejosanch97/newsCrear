@@ -174,14 +174,25 @@ const articles = [
         imageUrl: 'https://i.pinimg.com/1200x/b0/17/45/b01745dcce6b1428f99c6673b47613b3.jpg', // Replace this URL with an appropriate image
         date: 'October 16, 2025',
     },
+    {
+        id: '15',
+        title: 'CREAR CELEBRATES CHINESE NEW YEAR',
+        subtitle: 'A vibrant journey through traditions, dragons, and cultural joy. Watch our students bring the spirit of the Lunar New Year to life!',
+        author: 'CREAR Cultural Team',
+        category: 'Cultural Events',
+        tags: ['Chinese New Year', 'Culture', 'Celebration', 'Video'],
+        slug: 'chinese-new-year-celebration',
+        imageUrl: 'https://i.pinimg.com/originals/4e/9d/87/4e9d87f8022d47f7cae6012efc96bb82.gif', // Placeholder por si falla el video
+        date: 'February 26, 2026',
+        isVideo: true // Marcador para saber que esta noticia lleva video
+    }
 ];
 
 export const Home = () => {
     const navigate = useNavigate();
-    const location = useLocation(); // <--- Escuchamos la URL
+    const location = useLocation();
 
     // LEER EL FILTRO DE LA URL
-    // Si la URL es /?filter=CULTURA, filter será "CULTURA"
     const queryParams = new URLSearchParams(location.search);
     const filter = queryParams.get("filter") || "TODOS";
 
@@ -215,7 +226,6 @@ export const Home = () => {
     return (
         <main className="home-wrapper">
             <header className="section-header">
-                {/* QUITAMOS LOS BOTONES DE AQUÍ PARA QUE NO HAYA DUPLICIDAD */}
                 <h1 className="main-headline">
                     {filter === "TODOS" ? "Periódico Escolar CREAR" : filter}
                 </h1>
@@ -223,14 +233,22 @@ export const Home = () => {
 
             <div className="newspaper-layout">
                 {featuredArticle ? (
-                    <section className="hero-section" onClick={() => handleReadMore(featuredArticle.slug)}>
+                    /* Agregamos una clase especial video-featured */
+                    <section className="hero-section video-featured">
                         <div className="hero-grid">
-                            <div className="hero-image-container">
-                                <img src={featuredArticle.imageUrl} alt={featuredArticle.title} />
+                            <div className="hero-image-container video-container">
+                                {/* NUEVO: IFRAME DEL VIDEO REEMPLAZANDO LA IMG */}
+                                <iframe
+                                    src="https://player.cloudinary.com/embed/?cloud_name=deafueoco&public_id=VIDEO-2026-02-26-11-57-38_uqql0y&profile=cld-looping"
+                                    className="featured-video-iframe"
+                                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                                    allowFullScreen
+                                    frameBorder="0"
+                                ></iframe>
                                 <span className="floating-badge">{featuredArticle.category}</span>
                             </div>
                             <div className="hero-text">
-                                <span className="hero-eyebrow">DESTACADO</span>
+                                <span className="hero-eyebrow">DESTACADO EN VIDEO</span>
                                 <h2>{featuredArticle.title}</h2>
                                 <p className="hero-description">{featuredArticle.subtitle}</p>
                                 <div className="hero-meta">
@@ -238,6 +256,8 @@ export const Home = () => {
                                     <span className="dot"></span>
                                     <span className="date">{featuredArticle.date}</span>
                                 </div>
+                                {/* Botón opcional por si quieren ir a los detalles de todos modos */}
+                                
                             </div>
                         </div>
                     </section>
