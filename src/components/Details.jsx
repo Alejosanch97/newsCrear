@@ -416,6 +416,166 @@ const articlesData = [
     `,
         summary: `Explores the history and current relevance of antibacterial gel, from its origins in the late 20th century to its fundamental role during the 2020 pandemic. Additionally, the article provides a detailed guide and ingredient list for making your own gel at home, emphasizing its importance as a tool for personal and community protection.`
     },
+    {
+    id: '15',
+    title: 'CHINESE NEW YEAR 2026: A JOURNEY OF DRAGONS AND TRADITION',
+    subtitle: 'Relive the vibrant celebration where our community embraced ancient culture through art and joy.',
+    author: 'Colegio CREAR Editorial',
+    category: 'Announcements',
+    tags: ['Chinese New Year', 'culture', 'celebration', 'school events', 'tradition', 'creativity'],
+    slug: 'chinese-new-year-celebration-crear-2026',
+    imageUrl: 'https://i.pinimg.com/736x/5a/ac/66/5aac665bf00316b31bc0012588e93cea.jpg', // Sugerencia: Una imagen de un dragón o linterna roja
+    date: 'February 26, 2026',
+    fullArticleText: `
+        <p class="details-page-paragraph">The atmosphere at Colegio Crear was transformed into a sea of red and gold as we gathered to celebrate the Lunar New Year. This wasn't just an event; it was a profound cultural immersion that allowed our students to explore the richness of Chinese traditions, symbols, and values. From the strength of the dragon to the wisdom of the ancient legends, every corner of our school breathed inspiration.</p>
+
+        <div class="video-news-container">
+            <h3 class="details-page-heading">The Celebration in Motion</h3>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://player.cloudinary.com/embed/?cloud_name=deafueoco&public_id=VIDEO-2026-02-26-11-57-38_uqql0y&profile=cld-looping"
+                    class="featured-video-iframe"
+                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    frameBorder="0">
+                </iframe>
+            </div>
+            <p class="video-caption">Watch the highlights of our vibrant parade and the artistic performances of our students.</p>
+        </div>
+
+        <h3 class="details-page-heading">Unity in Diversity</h3>
+        <p class="details-page-paragraph">At Colegio Crear, we believe that understanding the world starts with experiencing its diverse cultures. During the festivities, students engaged in hands-on workshops, creating traditional lanterns and learning the art of calligraphy. The playground echoed with laughter and drums, marking a new beginning filled with prosperity and hope for our entire educational family.</p>
+        
+        <div class="side-image-section central-align">
+            <div class="side-text-content">
+                <h3 class="details-page-heading">A Legacy of Joy</h3>
+                <p class="details-page-paragraph">The highlight of the day was the collaborative spirit shown by every grade. Teachers and students worked side-by-side to decorate our halls, proving that when we celebrate together, we strengthen the bonds of our community. This Chinese New Year has left us with unforgettable memories and a renewed commitment to global citizenship.</p>
+            </div>
+            <div class="side-image-container">
+                <img src="https://i.pinimg.com/736x/ce/3c/8f/ce3c8f255966b60a18e81cba190fbc68.jpg" alt="Traditional Decorations" />
+            </div>
+        </div>
+
+        <p class="details-page-paragraph quote-text">"May the year ahead bring you the courage of a tiger and the wisdom of a dragon. Happy Lunar New Year to our entire CREAR family!"</p>
+    `,
+    summary: `A vibrant recap of the Chinese New Year festivities at Colegio Crear, featuring a special video highlights reel, cultural insights, and a message of prosperity for the school community.`
+},
+    {
+    id: '16',
+    title: 'Mundo digital: acompañar para proteger',
+    subtitle: 'Guía para familias sobre los riesgos y el acompañamiento en el entorno digital.',
+    author: 'Departamento de Orientación - Colegio CREAR',
+    category: 'Announcements',
+    tags: ['seguridad digital', 'familia', 'prevención', 'redes sociales', 'educación'],
+    slug: 'mundo-digital-acompanar-para-proteger',
+    imageUrl: 'https://i.pinimg.com/736x/ff/63/dd/ff63dd3fe2ee62c6e2b7da526223ee0a.jpg',
+    date: 'March 04, 2026',
+    fullArticleText: `
+        <p class="details-page-paragraph">En la actualidad, las redes sociales y los videojuegos en línea hacen parte de la cotidianidad de niños, niñas y adolescentes. A través de estos espacios se comunican, aprenden, se entretienen y construyen vínculos. Sin embargo, pueden estar expuestos a riesgos que impacten negativamente su bienestar emocional, social e incluso su seguridad.</p>
+        
+        <p class="details-page-paragraph">Acompañar el uso de la tecnología en casa es una acción de cuidado y corresponsabilidad, por esto, es nuestra responsabilidad informarnos sobre los posibles riesgos y medidas a tomar para orientar mejor a nuestros niños, niñas y adolescentes.</p>
+
+        <div class="side-image-section central-align">
+            <div class="side-image-container">
+                <img src="https://i.pinimg.com/736x/b8/4b/ba/b84bbad3a7decb27eb80a24f0cd7f73f.jpg" alt="Riesgos Redes Sociales" />
+            </div>
+            <div class="side-text-content">
+                <h3 class="details-page-heading">Entre los riesgos más latentes se encuentran en redes sociales se encuentran: </h3>
+                <ul class="details-page-list">
+                    <li><strong>Grooming:</strong> cuando un adulto establece una relación de confianza con un menor a través de internet con fines de abuso o explotación.</li>
+                    <li><strong>Sexting:</strong> envío de imágenes o mensajes íntimos que pueden difundirse sin consentimiento.</li>
+                    <li><strong>Sextorsión:</strong> chantaje a partir de contenido íntimo previamente compartido.</li>
+                    <li><strong>Ciberacoso:</strong> agresiones, amenazas o humillaciones reiteradas en medios digitales.</li>
+                    <li><strong>Phishing:</strong> es un delito cibernético que utiliza la mentira y el engaño para robar datos personales que pueden terminar en suplantación de identidad o robo.</li>
+                    <li><strong>Exposición a retos virales peligrosos</strong> </li>
+                    <li><strong>Exposición a contenidos no apropiados para su edad </strong> (contenido sexual explicito, violencia explicita, mensajes que incitan a odio, sitios que promueven conductas peligrosas como autolesiones, conducta suicida, trastornos de conducta alimentaria, entre otros)</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="details-page-heading">Funciones Críticas en Apps Populares</h3>
+        <p class="details-page-paragraph">Muchas plataformas digitales cuentan con funciones que pueden dificultar la supervisión si no se conocen adecuadamente. Por ejemplo, WhatsApp permite activar mensajes temporales, enviar fotos que desaparecen y restringir ciertos chats; Instagram incluye modo efímero, limitación de mensajes y la posibilidad de crear cuentas privadas o secundarias; Telegram ofrece chats secretos con autodestrucción de mensajes; Snapchat elimina mensajes e imágenes tras ser visualizados; y TikTok expone constantemente a nuevos contenidos a través de su algoritmo y permite el envío de mensajes directos. Estas características, aunque pueden tener fines de privacidad, también pueden ser utilizadas para ocultar interacciones o contenidos sin la supervisión de adultos.</p>
+
+        <h3 class="details-page-heading">Videojuegos en red</h3>
+        <p class="details-page-paragraph">Por otro lado, los videojuegos en red también incluyen espacios de interacción abierta que requieren supervisión y límites claros. Plataformas como Roblox, Minecraft, Fortnite y Free Fire permiten chatear con otros jugadores, realizar compras dentro del juego y conectarse con personas de diferentes lugares del mundo, lo que puede implicar riesgos como contacto con desconocidos, lenguaje agresivo o ciberacoso, solicitudes de información personal y microtransacciones no autorizadas; además, su sistema de recompensas inmediatas puede favorecer el uso excesivo, afectando el sueño, el rendimiento académico y la regulación emocional si no existe acompañamiento adulto y normas definidas.</p>
+
+        <div class="side-image-section right-side central-align">
+            <div class="side-image-container">
+                <img src="https://revistavive.com/wp-content/uploads/2023/01/INTERNET-CONTROL-DE-FAMILIA-GRANDE.png" alt="Prevención en casa" />
+            </div>
+            <div class="side-text-content">
+                <h3 class="details-page-heading">¿Qué podemos hacer como familias?</h3>
+                <ul class="details-page-list">
+                    <li>Mantener un diálogo abierto y sin juicio sobre lo que ven, comparten y juegan.</li>
+                    <li>Establecer tiempos definidos de uso y acuerdos claros sobre los contactos que el niño, niña o adolescente puede agregar a redes sociales.</li>
+                    <li>Revisar junto a ellos las configuraciones de privacidad y seguridad.</li>
+                    <li>Verificar la clasificación por edades de juegos y contenidos.</li>
+                    <li>Ubicar los dispositivos en espacios comunes del hogar.</li>
+                    <li>Estar atentos a cambios en el estado de ánimo, aislamiento, alteraciones del sueño o secretismo extremo.</li>
+                    <li>Reforzar que no deben compartir datos personales, fotografías íntimas ni información del colegio o la familia.</li>
+                    <li>Implementar recursos o aplicaciones de supervisión parental como Family lik, qustodio, Norton Family, Screen Time, Kids Place, entre otras. </li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="details-page-paragraph">Desde el marco de protección de la infancia en Colombia, el cuidado en entornos digitales es una responsabilidad compartida entre familia, institución y Estado. La supervisión activa y la educación digital son medidas preventivas fundamentales.</p>
+
+        <h3 class="details-page-heading">Nuestro compromiso institucional</h3>
+        <p class="details-page-paragraph">Como institución educativa, promovemos el uso consciente, crítico y responsable de la tecnología, favoreciendo el equilibrio entre la vida digital y el desarrollo de habilidades sociales, emocionales y cognitivas mediante experiencias presenciales significativas; por esta razón, el uso de celulares dentro de la institución no está permitido, salvo cuando un docente lo autoriza formalmente con fines pedagógicos a través de la plataforma Phideas. Entendemos que acompañar no es invadir, sino orientar, establecer límites claros y construir confianza, pues la mejor prevención surge cuando existe información adecuada, presencia activa y comunicación permanente en la familia. <strong>Por esta razón, el uso de celulares dentro de la institución no está permitido</strong>, salvo autorización formal docente para fines pedagógicos.</p>
+
+        <p class="details-page-paragraph" style="text-align: center; font-style: italic; margin-top: 3rem;">
+            "Acompañar no es invadir. Es orientar, establecer límites claros y construir confianza."
+        </p>
+
+        <div style="text-align:center; margin-top:2rem;">
+    <button
+        onclick="document.getElementById('referenciasDigital').classList.toggle('show-referencias')"
+        class="referencias-btn">
+        Ver referencias
+    </button>
+</div>
+
+<div id="referenciasDigital" class="referencias-container">
+    <p class="details-page-paragraph">
+        <strong>Referencias:</strong><br><br>
+
+        Instituto Colombiano de Bienestar Familiar (ICBF). (2019).
+        <em>Riesgos digitales a los que se exponen los niños y cómo prevenirlos</em>.<br>
+        <a href="https://www.icbf.gov.co/ser-papas/riesgos-digitales-los-que-se-exponen-los-ninos-y-como-prevenirlos" target="_blank">
+        Ver fuente
+        </a><br><br>
+
+        Instituto Colombiano de Bienestar Familiar (ICBF). (2020).
+        <em>Cinco apps de control parental para proteger niñas y niños en internet</em>.<br>
+        <a href="https://www.icbf.gov.co/mis-manos-te-ensenan/cinco-apps-de-control-parental-para-proteger-ninas-y-ninos-en-internet" target="_blank">
+        Ver fuente
+        </a><br><br>
+
+        Valero, B. & Rivera, A. (2023).
+        <em>El impacto de los medios y redes sociales en las conductas sociales de niños, niñas y adolescentes (2018-2021)</em>.
+        Revista Tejidos Sociales, 5(1), 1-11.<br><br>
+
+        Universidad de Antioquia. (2015).
+        <em>Cuando la niñez se vuelve viral. Los riesgos de la exposición en redes sociales</em>.<br>
+        <a href="https://www.udea.edu.co/wps/portal/udea/web/inicio/udea-noticias/udea-noticia/contenido/asnoticias/periodicoalmamater/cuando-la-ninez-se-vuelve-viral-pam-744/" target="_blank">
+        Ver fuente
+        </a><br><br>
+
+        UNICEF. (s.f.).
+        <em>Salud mental de los adolescentes y redes sociales</em>.<br>
+        <a href="https://www.unicef.org/parenting/es/salud-mental/adolescentes-y-redes-sociales" target="_blank">
+        Ver fuente
+        </a><br><br>
+
+        UNICEF. (2021).
+        <em>¿Son las redes sociales malas para la salud mental de los adolescentes?</em>.<br>
+        <a href="https://www.unicef.org/vietnam/stories/social-media-bad-teens-mental-health" target="_blank">
+        Ver fuente
+        </a>
+    </p>
+</div>
+    `
+}
 ];
 
 export const Details = () => {

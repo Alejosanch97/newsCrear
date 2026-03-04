@@ -227,6 +227,181 @@ body {
     font-weight: 600;
 }
 
+
+/* Contenedor flexible para secciones de imagen + texto */
+.flex-article-section {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 3rem 0;
+}
+
+/* Para variar el diseño: imagen a la derecha en la segunda sección */
+.flex-article-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-article-image {
+    flex: 1;
+    max-width: 45%;
+}
+
+.flex-article-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+.flex-article-content {
+    flex: 1.2;
+}
+
+/* Estilo para listas y frases destacadas */
+.details-page-list {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.details-page-list li {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.quote-text {
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    color: #555;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top: 1px solid #eee;
+}
+
+/* AJUSTE PARA MÓVILES: Todo se apila verticalmente */
+@media (max-width: 768px) {
+    .flex-article-section, 
+    .flex-article-section.reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .flex-article-image {
+        max-width: 100%;
+    }
+}
+
+.referencias-btn {
+    background-color: #00473e;
+    color: #fffffe;
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.referencias-btn:hover {
+    background-color: #faae2b;
+    color: #00473e;
+    transform: translateY(-2px);
+}
+
+.referencias-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.show-referencias {
+    max-height: 1500px;
+    opacity: 1;
+    margin-top: 1.5rem;
+}
+
+/* Contenedor que agrupa el título del video y el video mismo */
+.video-news-container {
+    margin: 3rem auto;
+    /* Cambia este porcentaje para ajustar el tamaño general (ej. 70% o 80%) */
+    max-width: 750px; 
+    width: 90%; /* Asegura que en pantallas pequeñas no se desborde */
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #eef2f5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* El Wrapper que mantiene la proporción 16:9 */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto estándar */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* El iframe se adapta al tamaño del wrapper */
+.featured-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    display: block;
+}
+
+/* Ajuste opcional para el pie de foto del video */
+.video-caption {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* El Wrapper que mantiene la proporción 16:9 */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto estándar 16:9 */
+    height: 0;
+    overflow: hidden;
+    background-color: #000; /* Fondo negro de seguridad */
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Forzamos al iframe a centrarse exactamente al medio */
+.featured-video-iframe {
+    position: absolute;
+    top: 50%; /* Lo baja al 50% del contenedor */
+    left: 50%; /* Lo mueve al 50% hacia la derecha */
+    width: 100% !important;
+    height: 100% !important;
+    
+    /* Esta línea es la que hace el centrado real compensando el movimiento */
+    transform: translate(-50%, -50%); 
+    
+    /* Evita que el reproductor de Cloudinary se comporte raro */
+    object-fit: contain; 
+    
+    border: none;
+    display: block;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .details-page-wrapper {

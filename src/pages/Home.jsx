@@ -160,7 +160,7 @@ const articles = [
     category: 'Historietas Hechas por Niños',
     tags: ['dibujo', 'infantil', 'creatividad', 'humor', 'escuela', 'historietas'],
     slug: 'historietas-creadas-por-ninos-transicion',
-    imageUrl: 'https://i.pinimg.com/736x/6f/5e/58/6f5e58a3611e0100a79479d1c24c703d.jpg', // Reemplaza esta línea
+    imageUrl: 'https://i.pinimg.com/736x/6f/5e/58/6f5e58a3611e0100a79479d1c24c703d.jpg', 
     date: 'September 30, 2025',
     },
     {
@@ -171,21 +171,31 @@ const articles = [
         category: 'Science and Health',
         tags: ['hygiene', 'health', 'science', 'experiment', 'pandemic', 'alcohol', 'gel'],
         slug: 'the-power-of-antibacterial-gel-formula-and-history',
-        imageUrl: 'https://i.pinimg.com/1200x/b0/17/45/b01745dcce6b1428f99c6673b47613b3.jpg', // Replace this URL with an appropriate image
+        imageUrl: 'https://i.pinimg.com/1200x/b0/17/45/b01745dcce6b1428f99c6673b47613b3.jpg', 
         date: 'October 16, 2025',
     },
     {
         id: '15',
-        title: 'CREAR CELEBRATES CHINESE NEW YEAR',
-        subtitle: 'A vibrant journey through traditions, dragons, and cultural joy. Watch our students bring the spirit of the Lunar New Year to life!',
-        author: 'CREAR Cultural Team',
-        category: 'Cultural Events',
-        tags: ['Chinese New Year', 'Culture', 'Celebration', 'Video'],
-        slug: 'chinese-new-year-celebration',
-        imageUrl: 'https://i.pinimg.com/originals/4e/9d/87/4e9d87f8022d47f7cae6012efc96bb82.gif', // Placeholder por si falla el video
+        title: 'CHINESE NEW YEAR 2026: A JOURNEY OF DRAGONS AND TRADITION',
+        subtitle: 'Relive the vibrant celebration where our community embraced ancient culture through art and joy.',
+        author: 'Colegio CREAR Editorial',
+        category: 'Announcements',
+        tags: ['Chinese New Year', 'culture', 'celebration', 'tradition'],
+        slug: 'chinese-new-year-celebration-crear-2026',
+        imageUrl: 'https://i.pinimg.com/736x/81/b7/71/81b771b77f41c485b4c83a42b4e74449.jpg', 
         date: 'February 26, 2026',
-        isVideo: true // Marcador para saber que esta noticia lleva video
-    }
+    },
+    {
+        id: '16',
+        title: 'Mundo digital: acompañar para proteger',
+        subtitle: 'La importancia de la supervisión activa y el diálogo familiar en el uso de tecnologías y redes sociales.',
+        author: 'Departamento de Orientación - Colegio CREAR',
+        category: 'Announcements',
+        tags: ['seguridad digital', 'familia', 'prevención', 'redes sociales', 'educación'],
+        slug: 'mundo-digital-acompanar-para-proteger',
+        imageUrl: 'https://i.pinimg.com/736x/ff/63/dd/ff63dd3fe2ee62c6e2b7da526223ee0a.jpg', 
+        date: 'March 04, 2026',
+    },
 ];
 
 export const Home = () => {
@@ -233,22 +243,21 @@ export const Home = () => {
 
             <div className="newspaper-layout">
                 {featuredArticle ? (
-                    /* Agregamos una clase especial video-featured */
-                    <section className="hero-section video-featured">
+                    <section 
+                        className="hero-section" 
+                        onClick={() => handleReadMore(featuredArticle.slug)}
+                    >
                         <div className="hero-grid">
-                            <div className="hero-image-container video-container">
-                                {/* NUEVO: IFRAME DEL VIDEO REEMPLAZANDO LA IMG */}
-                                <iframe
-                                    src="https://player.cloudinary.com/embed/?cloud_name=deafueoco&public_id=VIDEO-2026-02-26-11-57-38_uqql0y&profile=cld-looping"
-                                    className="featured-video-iframe"
-                                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-                                    allowFullScreen
-                                    frameBorder="0"
-                                ></iframe>
+                            <div className="hero-image-container">
+                                <img 
+                                    src={featuredArticle.imageUrl} 
+                                    alt={featuredArticle.title} 
+                                    className="hero-main-image"
+                                />
                                 <span className="floating-badge">{featuredArticle.category}</span>
                             </div>
                             <div className="hero-text">
-                                <span className="hero-eyebrow">DESTACADO EN VIDEO</span>
+                                <span className="hero-eyebrow">ÚLTIMA NOTICIA</span>
                                 <h2>{featuredArticle.title}</h2>
                                 <p className="hero-description">{featuredArticle.subtitle}</p>
                                 <div className="hero-meta">
@@ -256,8 +265,6 @@ export const Home = () => {
                                     <span className="dot"></span>
                                     <span className="date">{featuredArticle.date}</span>
                                 </div>
-                                {/* Botón opcional por si quieren ir a los detalles de todos modos */}
-                                
                             </div>
                         </div>
                     </section>
