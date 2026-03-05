@@ -480,7 +480,7 @@ const articlesData = [
                 <img src="https://i.pinimg.com/736x/b8/4b/ba/b84bbad3a7decb27eb80a24f0cd7f73f.jpg" alt="Riesgos Redes Sociales" />
             </div>
             <div class="side-text-content">
-                <h3 class="details-page-heading">Entre los riesgos más latentes se encuentran en redes sociales se encuentran: </h3>
+                <h3 class="details-page-heading">Entre los riesgos más latentes en redes sociales se encuentran:</h3>
                 <ul class="details-page-list">
                     <li><strong>Grooming:</strong> cuando un adulto establece una relación de confianza con un menor a través de internet con fines de abuso o explotación.</li>
                     <li><strong>Sexting:</strong> envío de imágenes o mensajes íntimos que pueden difundirse sin consentimiento.</li>
@@ -513,7 +513,7 @@ const articlesData = [
                     <li>Ubicar los dispositivos en espacios comunes del hogar.</li>
                     <li>Estar atentos a cambios en el estado de ánimo, aislamiento, alteraciones del sueño o secretismo extremo.</li>
                     <li>Reforzar que no deben compartir datos personales, fotografías íntimas ni información del colegio o la familia.</li>
-                    <li>Implementar recursos o aplicaciones de supervisión parental como Family lik, qustodio, Norton Family, Screen Time, Kids Place, entre otras. </li>
+                    <li>Implementar recursos o aplicaciones de supervisión parental como Family link, qustodio, Norton Family, Screen Time, Kids Place, entre otras. </li>
                 </ul>
             </div>
         </div>
@@ -521,7 +521,7 @@ const articlesData = [
         <p class="details-page-paragraph">Desde el marco de protección de la infancia en Colombia, el cuidado en entornos digitales es una responsabilidad compartida entre familia, institución y Estado. La supervisión activa y la educación digital son medidas preventivas fundamentales.</p>
 
         <h3 class="details-page-heading">Nuestro compromiso institucional</h3>
-        <p class="details-page-paragraph">Como institución educativa, promovemos el uso consciente, crítico y responsable de la tecnología, favoreciendo el equilibrio entre la vida digital y el desarrollo de habilidades sociales, emocionales y cognitivas mediante experiencias presenciales significativas; por esta razón, el uso de celulares dentro de la institución no está permitido, salvo cuando un docente lo autoriza formalmente con fines pedagógicos a través de la plataforma Phideas. Entendemos que acompañar no es invadir, sino orientar, establecer límites claros y construir confianza, pues la mejor prevención surge cuando existe información adecuada, presencia activa y comunicación permanente en la familia. <strong>Por esta razón, el uso de celulares dentro de la institución no está permitido</strong>, salvo autorización formal docente para fines pedagógicos.</p>
+        <p class="details-page-paragraph">Como institución educativa, promovemos el uso consciente, crítico y responsable de la tecnología, favoreciendo el equilibrio entre la vida digital y el desarrollo de habilidades sociales, emocionales y cognitivas mediante experiencias presenciales significativas. Entendemos que acompañar no es invadir, sino orientar, establecer límites claros y construir confianza, pues la mejor prevención surge cuando existe información adecuada, presencia activa y comunicación permanente en la familia. <strong>Por esta razón, el uso de celulares dentro de la institución no está permitido</strong>, salvo autorización formal docente para fines pedagógicos.</p>
 
         <p class="details-page-paragraph" style="text-align: center; font-style: italic; margin-top: 3rem;">
             "Acompañar no es invadir. Es orientar, establecer límites claros y construir confianza."

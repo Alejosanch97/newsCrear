@@ -423,15 +423,31 @@ body {
 
 .side-image-container img {
     width: 100%;
-    height: auto;
+    /* Cambia 'auto' por una medida específica o una proporción */
+    height: 500px; /* Opción A: Altura fija en píxeles */
+    
+    /* O mejor aún, usa una proporción (ancho / alto) */
+    /* aspect-ratio: 4 / 5; */ /* Opción B: Esto la hará más alta que ancha */
+
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     display: block;
-    object-fit: cover;
+    
+    /* IMPORTANTE: Esto evita que la imagen se estire o se vea deformada */
+    object-fit: cover; 
+    object-position: center;
 }
 
 .side-text-content {
     flex: 1.2;
+}
+
+.side-image-section {
+    display: flex;
+    align-items: center; /* Cambiado de flex-start a center */
+    gap: 2.5rem;
+    margin: 3rem 0;
+    width: 100%;
 }
 
 /* ==========================================================================
