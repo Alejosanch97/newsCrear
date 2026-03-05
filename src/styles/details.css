@@ -490,3 +490,152 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 2px solid #ddd; /* Añade un borde sutil para enmarcar el dibujo */
 }
+
+/* ==========================================================================
+   RESPONSIVE COMPLETO: DE IPHONE A IPAD PRO
+   ========================================================================== */
+
+/* 1. IPADS Y TABLETS GRANDES (iPad Pro 11", 12.9", Pro Max Tablets) */
+@media (max-width: 1100px) {
+    .details-page-wrapper {
+        max-width: 95%; /* Aprovecha más espacio en tablets */
+        margin: 1.5rem auto;
+    }
+
+    .details-page-title {
+        font-size: 2.5rem; /* Ajuste sutil de escala */
+    }
+
+    .flex-article-section {
+        gap: 1.5rem; /* Reduce espacio entre imagen y texto */
+    }
+}
+
+/* 2. TABLETS MEDIANAS Y IPAD MINI (Hasta 820px) */
+@media (max-width: 820px) {
+    .details-page-header-content,
+    .details-page-body {
+        padding: 0 1.8rem 1.8rem; /* Reducción de aire lateral */
+    }
+
+    /* Convertimos las secciones flexibles en verticales */
+    .flex-article-section, 
+    .flex-article-section.reverse {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .flex-article-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .flex-article-content {
+        width: 100%;
+    }
+
+    /* Ajuste del contenedor de video principal */
+    .video-news-container {
+        width: 95%;
+        padding: 1.2rem;
+    }
+}
+
+/* 3. CELULARES GRANDES (iPhone 15/16 Pro Max, Plus, S24 Ultra) */
+@media (max-width: 480px) {
+    .details-page-wrapper {
+        padding: 0 10px;
+        margin-top: 1rem;
+    }
+
+    .back-button-top {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* La imagen hero ya no se corta, se ve completa */
+    .details-page-hero-image {
+        max-height: 280px; 
+        border-radius: 8px 8px 0 0;
+    }
+
+    .details-page-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .details-page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Cuerpo del artículo: Lectura optimizada */
+    .details-page-body {
+        padding: 0 1.2rem 1.5rem;
+        font-size: 1.05rem; /* Un poco más pequeño para que no se sienta gigante */
+    }
+
+    .details-page-body p.details-page-paragraph {
+        text-align: left; /* En móviles el justificado crea huecos feos (rivers) */
+        margin-bottom: 1.2rem;
+    }
+
+    /* Imágenes de historietas y dibujos */
+    .details-page-body img.details-page-image,
+    .details-page-body img.details-page-in-article-image {
+        max-width: 100%;
+        margin: 1.2rem 0;
+    }
+
+    /* Videos: Aseguramos que el 16:9 se mantenga sin bordes raros */
+    .video-wrapper, .details-page-body .video-container {
+        margin: 1rem 0;
+        border-radius: 6px;
+    }
+
+    /* Footer y Resumen */
+    .details-page-footer {
+        padding: 1.2rem;
+    }
+
+    .details-page-summary {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .details-page-footer .footer-info-grid {
+        grid-template-columns: 1fr; /* Una sola columna para datos de autor/fecha */
+        gap: 10px;
+    }
+
+    /* Botón de referencias */
+    .referencias-btn {
+        width: 100%; /* Botón grande para el pulgar */
+        padding: 12px;
+    }
+}
+
+/* 4. CELULARES PEQUEÑOS (iPhone SE, Mini) */
+@media (max-width: 350px) {
+    .details-page-title {
+        font-size: 1.5rem;
+    }
+
+    .details-page-body h3.details-page-heading {
+        font-size: 1.4rem;
+    }
+
+    .details-page-body {
+        padding: 0 0.8rem 1rem;
+    }
+}
+
+/* 5. AJUSTE DE ACCESIBILIDAD PARA VIDEOS */
+/* Evita que los iframes de video superen el alto de la pantalla en modo horizontal */
+@media (max-height: 450px) and (orientation: landscape) {
+    .details-page-hero-image {
+        max-height: 200px;
+    }
+    .video-news-container {
+        max-width: 60%;
+    }
+}

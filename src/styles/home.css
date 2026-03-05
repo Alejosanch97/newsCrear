@@ -714,3 +714,145 @@ body {
         padding: 4px 10px;
     }
 }
+
+/* ==========================================================================
+   RESPONSIVE COMPLETO: TABLETS Y CELULARES
+   ========================================================================== */
+
+/* 1. IPADS Y TABLETS (Hasta 1024px) */
+@media (max-width: 1024px) {
+    .home-wrapper {
+        margin-top: 100px;
+        padding: 0 30px;
+    }
+
+    .hero-text {
+        padding: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 2.6rem; /* Reducción ligera del título principal */
+    }
+
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 3 */
+        gap: 30px;
+    }
+}
+
+/* 2. TABLETS VERTICALES (Hasta 850px) */
+@media (max-width: 850px) {
+    /* El Hero (destacado) pasa de horizontal a vertical */
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-image-container, 
+    .video-container {
+        height: 350px; /* Altura fija para que la imagen no sea infinita */
+        min-height: auto;
+    }
+
+    .hero-text {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding: 35px;
+        text-align: center;
+        align-items: center; /* Centra el contenido en tablets */
+    }
+
+    .hero-text h2 {
+        font-size: 2.4rem;
+    }
+
+    .main-headline {
+        font-size: 3rem;
+    }
+}
+
+/* 3. CELULARES (Hasta 600px) */
+@media (max-width: 600px) {
+    .home-wrapper {
+        margin-top: 85px;
+        padding: 0 15px;
+    }
+
+    .main-headline {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    /* Filtros: Permitir scroll horizontal si son muchas categorías */
+    .category-pills {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        scrollbar-width: none; /* Oculta scroll en Firefox */
+    }
+    .category-pills::-webkit-scrollbar { display: none; } /* Oculta scroll en Chrome/Safari */
+
+    .pill {
+        padding: 6px 16px;
+        font-size: 0.65rem;
+    }
+
+    /* Grilla de noticias: 1 sola columna para lectura vertical cómoda */
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 30px;
+    }
+
+    .hero-image-container, 
+    .video-container {
+        height: 250px;
+    }
+
+    .hero-text {
+        padding: 25px 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        text-align: left; /* Volvemos a izquierda para mejor lectura en móvil */
+    }
+
+    /* Mini Cards */
+    .mini-card {
+        padding: 15px;
+    }
+
+    .mini-img {
+        margin: -15px -15px 15px -15px; /* Ajuste del margen negativo al padding móvil */
+    }
+
+    .mini-title {
+        font-size: 1.4rem;
+    }
+
+    .floating-badge {
+        top: 15px;
+        left: 15px;
+        font-size: 0.6rem;
+    }
+}
+
+/* 4. OPTIMIZACIÓN PARA PANTALLAS MUY PEQUEÑAS (Hasta 380px) */
+@media (max-width: 380px) {
+    .main-headline {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+}
