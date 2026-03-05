@@ -402,6 +402,102 @@ body {
     display: block;
 }
 
+/* --- CONTENEDORES FLEXIBLES DE IMAGEN + TEXTO --- */
+.side-image-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin: 3rem 0;
+    width: 100%;
+}
+
+/* Para que la imagen aparezca a la derecha en algunas secciones */
+.side-image-section.right-side {
+    flex-direction: row-reverse;
+}
+
+.side-image-container {
+    flex: 1;
+    max-width: 45%;
+}
+
+.side-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: block;
+    object-fit: cover;
+}
+
+.side-text-content {
+    flex: 1.2;
+}
+
+/* ==========================================================================
+   RESPONSIVE PARA LA PÁGINA DE DETALLE (MÓVILES)
+   ========================================================================== */
+
+@media (max-width: 820px) {
+    /* IMPORTANTE: Esto evita que la imagen y el texto se corten */
+    .side-image-section, 
+    .side-image-section.right-side {
+        flex-direction: column !important;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .side-image-container {
+        max-width: 100%; /* La imagen ahora ocupa todo el ancho */
+        width: 100%;
+    }
+
+    .side-text-content {
+        width: 100%;
+    }
+
+    /* Ajuste de tipografía en móvil */
+    .details-page-header-content {
+        padding: 0 1rem;
+    }
+
+    .details-page-title {
+        font-size: 2rem !important; /* Título más pequeño para iPhone */
+        line-height: 1.2;
+    }
+
+    .details-page-body {
+        padding: 0 1.2rem 2rem !important; /* Más aire a los lados */
+    }
+
+    .details-page-body p.details-page-paragraph {
+        text-align: left !important; /* Evita huecos raros en pantallas pequeñas */
+        font-size: 1.05rem;
+    }
+
+    .details-page-body h3.details-page-heading {
+        font-size: 1.5rem !important;
+        margin-top: 1.8rem;
+    }
+
+    /* Imagen Hero (la principal del inicio) */
+    .details-page-hero-image {
+        max-height: 300px;
+        border-radius: 0; /* Opcional: quitar bordes en móvil para look Full Width */
+    }
+}
+
+/* Ajuste para celulares muy pequeños (iPhone SE / Mini) */
+@media (max-width: 380px) {
+    .details-page-title {
+        font-size: 1.7rem !important;
+    }
+    
+    .details-page-body {
+        padding: 0 1rem 1.5rem !important;
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .details-page-wrapper {
