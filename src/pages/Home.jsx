@@ -196,6 +196,17 @@ const articles = [
         imageUrl: 'https://i.pinimg.com/736x/ff/63/dd/ff63dd3fe2ee62c6e2b7da526223ee0a.jpg', 
         date: 'March 04, 2026',
     },
+    {
+        id: '17',
+        title: 'WOMEN’S DAY: ART FOR EQUALITY',
+        subtitle: 'Our students express the importance of gender equality and women’s rights through representative drawings.',
+        author: 'Nicolás Gómez, Aaron Páez, Silvana Cruz, Nicolás Moreno Méndez',
+        category: 'Arts & Culture',
+        tags: ['Women’s Day', 'equality', 'art', 'student work', 'empowerment'],
+        slug: 'womens-day-art-for-equality-2026',
+        imageUrl: 'https://i.pinimg.com/1200x/fa/b0/ec/fab0ecd64dcf26b9355a74e067bc5deb.jpg', 
+        date: 'March 08, 2026',
+    },
 ];
 
 export const Home = () => {

@@ -575,7 +575,45 @@ const articlesData = [
     </p>
 </div>
     `
-}
+},
+{
+        id: '17',
+        title: 'WOMEN’S DAY: ART FOR EQUALITY',
+        subtitle: 'Our students express the importance of gender equality and women’s rights through representative drawings.',
+        author: 'Nicolás Gómez, Aaron Páez, Silvana Cruz, Nicolás Moreno Méndez',
+        category: 'Arts & Culture',
+        tags: ['Women’s Day', 'equality', 'art', 'student work', 'empowerment'],
+        slug: 'womens-day-art-for-equality-2026',
+        imageUrl: 'https://i.pinimg.com/1200x/fa/b0/ec/fab0ecd64dcf26b9355a74e067bc5deb.jpg',
+        date: 'March 08, 2026',
+        fullArticleText: `
+            <p class="details-page-paragraph">International Women's Day is a special date at CREAR. Our students used their creativity to celebrate women's history, strength, and the importance of equal rights for everyone. Here are some of the most representative drawings from our gallery.</p>
+            
+            <h3 class="details-page-heading">A Strong Woman</h3>
+            <img src="https://i.pinimg.com/736x/42/c6/1f/42c61f09803e282c9aab39983098b1e1.jpg" alt="A Strong Woman" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">"This drawing shows a woman with a lot of power. Women can do everything and they are very important for the world. I like the colors and the message of strength."</p>
+            <p class="details-page-paragraph"><strong>By: Nicolás Moreno Méndez - 3rd Grade</strong></p>
+
+            <h3 class="details-page-heading">The Empress: Asian Monarchy</h3>
+            <img src="https://i.pinimg.com/736x/c3/30/b8/c330b883c5192f81abf8ff8f14a78062.jpg" alt="Asian Empress" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">"In history, there are many important women in Asia. This is an Empress. She is a leader and she is very elegant. She represents the intelligence and culture of women in the East."</p>
+            <p class="details-page-paragraph"><strong>By: Silvana Cruz - 5th Grade</strong></p>
+
+            <h3 class="details-page-heading">Liberating Women</h3>
+            <img src="https://i.pinimg.com/736x/65/97/ae/6597aebafc165545afbd5e1adc838511.jpg" alt="Liberating Women" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">"Women fought for our freedom in the past. They are heroes of history. In this drawing, we see the courage of women who wanted a better future for everyone."</p>
+            <p class="details-page-paragraph"><strong>By: Aaron Páez - 5th Grade</strong></p>
+
+            <h3 class="details-page-heading">Gender Equality</h3>
+            <img src="https://i.pinimg.com/736x/ec/16/2f/ec162f94e1f4b5d178dc127dd6e43166.jpg" alt="Gender Equality" class="details-page-in-article-image" loading="lazy" />
+            <p class="details-page-paragraph">"Equality means that boys and girls have the same opportunities. We need to respect each other. In this picture, you can see how we can build a fair world together."</p>
+            <p class="details-page-paragraph"><strong>By: Nicolás Gómez - 3rd Grade</strong></p>
+            
+            <hr class="details-page-hr"/>
+        `,
+        summary: `To celebrate International Women's Day, students from 3rd and 5th grade created a series of drawings. The collection highlights women's strength, historical leadership, and the fundamental value of gender equality in our society.`
+    },
+
 ];
 
 export const Details = () => {
