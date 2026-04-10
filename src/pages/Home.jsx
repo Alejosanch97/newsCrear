@@ -207,6 +207,17 @@ const articles = [
         imageUrl: 'https://i.pinimg.com/1200x/fa/b0/ec/fab0ecd64dcf26b9355a74e067bc5deb.jpg', 
         date: 'March 08, 2026',
     },
+    {
+    id: '18',
+    title: 'VOICES FOR EQUALITY: PERSPECTIVES FROM OUR STUDENTS',
+    subtitle: 'Students from different grades share reflections, poems, and essays about the historical struggle for gender rights.',
+    author: 'Martín Rubiano, Maria Jose Giraldo, Alejandra Leon, Sophie Escobar',
+    category: 'Education & Society',
+    tags: ['Women’s Day', 'Gender Equality', 'Student Voices', 'Reflection'],
+    slug: 'voices-for-equality-student-perspectives-2026',
+    imageUrl: 'https://i.pinimg.com/736x/5e/ae/b4/5eaeb4c172d5f57e8a40e0761431464c.jpg',
+    date: 'March 10, 2026',
+},
 ];
 
 export const Home = () => {

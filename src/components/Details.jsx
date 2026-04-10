@@ -613,6 +613,69 @@ const articlesData = [
         `,
         summary: `To celebrate International Women's Day, students from 3rd and 5th grade created a series of drawings. The collection highlights women's strength, historical leadership, and the fundamental value of gender equality in our society.`
     },
+    {
+    id: '18',
+    title: 'VOICES FOR EQUALITY: PERSPECTIVES FROM OUR STUDENTS',
+    subtitle: 'Students from different grades share reflections, poems, and essays about the historical struggle for gender rights.',
+    author: 'Martín Rubiano, Maria Jose Giraldo, Alejandra Leon, Sophie Escobar',
+    category: 'Education & Society',
+    tags: ['Women’s Day', 'Gender Equality', 'Student Voices', 'Reflection'],
+    slug: 'voices-for-equality-student-perspectives-2026',
+    imageUrl: 'https://i.pinimg.com/736x/5e/ae/b4/5eaeb4c172d5f57e8a40e0761431464c.jpg',
+    date: 'March 08, 2026',
+    fullArticleText: `
+        <p class="details-page-paragraph">International Women's Day is more than a celebration; it is a moment for deep reflection on the journey toward justice and equity. Our students have expressed their thoughts through essays and poetry, highlighting the importance of building a society where rights are universal.</p>
+        
+        <h3 class="details-page-heading">Women Struggle for Gender Equality</h3>
+        <p class="details-page-paragraph">"The struggle of women for equal gender has evolved over the time to achieve equality and participation in the political, social, labor and education. The idea is to build a society where all people have the same rights. Women raised their voices to have the right to vote, to participate in political work and better conditions due to the fact that we celebrate international women day, a day of reflection and recognition for them."</p>
+        <p class="details-page-paragraph"><strong>By: Martín Rubiano - 2º Grade</strong></p>
+
+        <h3 class="details-page-heading">Song to Equality (Poem)</h3>
+        <p class="details-page-paragraph" style="font-style: italic; white-space: pre-line;">
+        In the long shadows of human history,
+        woman raised her silent voice,
+        a prisoner of a yoke that cruelly chains her,
+        but her soul was never broken.
+
+        She kept in her noble heart firmness,
+        constant virtue, ardent courage,
+        and although silence marked her sorrow,
+        an invincible fervor sprang forth in her spirit.
+
+        Her restrained tears were not in vain,
+        nor the slow pace of her tenacious walk,
+        for every effort, faithful and endured,
+        forged paths of equity and peace.
+
+        Today she rises with dignified head,
+        claiming her just status:
+        to be free, fulfilled, conscious,
+        with no barrier but her reason.
+
+        And in that cry, serene and strong,
+        a universal echo resounds:
+        that there be no chains dictated by fate,
+        nor unjust law that imposes evil.
+
+        Thus, at the dawn of new days,
+        the world is reborn in its clarity,
+        when in justice and harmony
+        equality finally blossoms.
+        </p>
+        <p class="details-page-paragraph"><strong>By: Maria Jose Giraldo - 4º Grade</strong></p>
+
+        <h3 class="details-page-heading">Our Power</h3>
+        <p class="details-page-paragraph">"The struggle of women for gender equality is a historical process that seeks to guarantee the same rights and opportunities for all people. From the suffragist movement, which achieved the right to vote, to current demands, women have driven changes in areas such as education, work, and politics. Although significant progress has been made, challenges remain, such as the gender pay gap, gender-based violence, and underrepresentation in positions of power. Therefore, this struggle continues to be fundamental to building a more just and equitable society."</p>
+        <p class="details-page-paragraph"><strong>By: Alejandra Leon - 4º Grade</strong></p>
+
+        <h3 class="details-page-heading">The Fight for Equality</h3>
+        <p class="details-page-paragraph">"Women's Day is celebrated on March 8 around the world. This day honors the brave women who fought for equality and better opportunities. In the past, many women did not have the same rights as men. Today organized marches and raised their voices for justice. Women can study, work, and lead in many areas. Women's Day reminds us that everyone deserves respect and equal opportunities."</p>
+        <p class="details-page-paragraph"><strong>By: Sophie Escobar - 5º Grade</strong></p>
+        
+        <hr class="details-page-hr"/>
+    `,
+    summary: `A collection of powerful reflections and creative writing by students from 2nd to 5th grade. Through poems and essays, they explore the history of the feminist movement, the importance of International Women's Day, and the ongoing challenges to achieve true global equity.`
+},
 
 ];
 
